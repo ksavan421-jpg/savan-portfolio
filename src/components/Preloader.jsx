@@ -87,13 +87,11 @@ export default function Preloader({ onComplete }) {
         {/* Brand Logo */}
         <div className="preloader-logo-wrapper" ref={logoRef}>
           <img
-            src="/project-logo.webp"
+            src="/project-logo.svg"
             alt="SK Logo"
             className="preloader-logo-img"
             width="54"
             height="60"
-            loading="eager"
-            decoding="async"
           />
         </div>
 
