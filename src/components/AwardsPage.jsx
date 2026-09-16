@@ -57,8 +57,13 @@ const AWARDS_DATA = {
       src: '/employee-of-the-month/employee-of-the-monrth-05.webp',
       alt: 'Certificate of Recognition - Employee of the Month 5',
       title: 'Employee of the Month'
+    },
+    {
+      id: 6,
+      src: '/employee-of-the-month/employee-of-the-monrth-06.webp',
+      alt: 'Certificate of Recognition - Employee of the Month 6',
+      title: 'Employee of the Month'
     }
-
   ],
   year: [
     {
@@ -248,13 +253,13 @@ export default function AwardsPage({
             {/* Slider or Empty State depending on available media */}
             {currentAwards.length > 0 && currentItem ? (
               <div
-                className="awards-slider-wrapper gallery-slider-wrapper"
+                className="gallery-slider-wrapper"
                 onTouchStart={handleTouchStart}
                 onTouchEnd={handleTouchEnd}
               >
                 <div
                   ref={slideRef}
-                  className="certificate-card gallery-slider-card awards-slider-card"
+                  className="memory-photo-card gallery-slider-card"
                   onClick={() => setActiveAward(currentItem)}
                   title="Click to view full size"
                   role="button"
@@ -264,7 +269,7 @@ export default function AwardsPage({
                   <img
                     src={currentItem.src}
                     alt={currentItem.alt}
-                    className="certificate-image awards-photo-img"
+                    className="memory-photo-img"
                     draggable="false"
                   />
 
@@ -274,7 +279,7 @@ export default function AwardsPage({
                 </div>
 
                 {/* Slider Footer with Dots and Two Control Buttons */}
-                <div className="gallery-slider-footer awards-slider-footer">
+                <div className="gallery-slider-footer">
                   <div className="gallery-slider-dots">
                     {currentAwards.map((_, idx) => (
                       <button
@@ -315,7 +320,7 @@ export default function AwardsPage({
                 </div>
               </div>
             ) : (
-              <div className="gallery-empty-state awards-empty-state">
+              <div className="gallery-empty-state">
                 <div className="gallery-empty-icon-box">
                   <Award size={28} />
                 </div>

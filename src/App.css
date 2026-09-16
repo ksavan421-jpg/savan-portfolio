@@ -1575,64 +1575,6 @@
   white-space: nowrap;
 }
 
-.awards-empty-state {
-  aspect-ratio: 4 / 3 !important;
-  max-height: clamp(260px, 42vh, 380px) !important;
-}
-
-.certificate-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  max-width: 520px;
-}
-
-.awards-slider-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 440px;
-}
-
-.awards-slider-card {
-  position: relative;
-  width: 100%;
-  max-width: 440px;
-  aspect-ratio: 4 / 3 !important;
-  max-height: clamp(260px, 42vh, 380px) !important;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: none !important;
-  cursor: pointer;
-  background: #ffffff !important;
-  border: 1px solid rgba(44, 22, 12, 0.1);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.awards-slider-card:hover {
-  transform: translateY(-3px) scale(1.01);
-  box-shadow: none !important;
-}
-
-.awards-slider-card .awards-photo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  user-select: none;
-  padding: 8px;
-  box-sizing: border-box;
-}
-
-.awards-slider-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: clamp(14px, 2.2vh, 22px);
-  width: 100%;
-  max-width: 440px;
-}
 
 /* --------------------------------------------------------------------------
    GALLERY PAGE STYLING
@@ -3254,30 +3196,6 @@
     line-height: 1.15 !important;
   }
 
-  .awards-empty-state {
-    width: 100% !important;
-    max-width: 380px !important;
-    margin: 0 auto !important;
-    aspect-ratio: 4 / 3 !important;
-  }
-
-  .awards-slider-wrapper {
-    width: 100% !important;
-    max-width: 100% !important;
-    align-items: center !important;
-  }
-
-  .awards-slider-card {
-    width: 100% !important;
-    max-width: 380px !important;
-    margin: 0 auto !important;
-  }
-
-  .awards-slider-footer {
-    width: 100% !important;
-    max-width: 380px !important;
-    margin: 16px auto 0 !important;
-  }
 
   /* Gallery Page on mobile */
   .gallery-main-body {
