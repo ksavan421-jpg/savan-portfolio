@@ -57,13 +57,8 @@ const AWARDS_DATA = {
       src: '/employee-of-the-month/employee-of-the-monrth-05.webp',
       alt: 'Certificate of Recognition - Employee of the Month 5',
       title: 'Employee of the Month'
-    },
-    {
-      id: 6,
-      src: '/employee-of-the-month/employee-of-the-monrth-06.webp',
-      alt: 'Certificate of Recognition - Employee of the Month 6',
-      title: 'Employee of the Month'
     }
+
   ],
   year: [
     {
