@@ -3724,3 +3724,19 @@
 .footer-social-btn:active {
   transform: scale(0.96);
 }
+
+/* --------------------------------------------------------------------------
+   NETLIFY BADGE / DRAWER OVERRIDE - DISPLAY NONE
+   -------------------------------------------------------------------------- */
+.nl-badge,
+#nl-badge,
+#nl-card,
+.nl-drawer,
+[aria-label*="Powered by Netlify"],
+[aria-controls="nl-card"],
+iframe[src*="netlify"] {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}

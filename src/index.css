@@ -78,3 +78,17 @@ a {
   flex-direction: column;
   position: relative;
 }
+
+/* Hide Netlify badge / drawer anywhere on website */
+.nl-badge,
+#nl-badge,
+#nl-card,
+.nl-drawer,
+[aria-label*="Powered by Netlify"],
+[aria-controls="nl-card"],
+iframe[src*="netlify"] {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}

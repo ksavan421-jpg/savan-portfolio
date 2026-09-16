@@ -11,6 +11,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Hide Netlify Badge anywhere on site -->
+    <style>
+      .nl-badge,
+      #nl-badge,
+      #nl-card,
+      .nl-drawer,
+      [aria-label*="Powered by Netlify"],
+      [aria-controls="nl-card"],
+      iframe[src*="netlify"] {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
