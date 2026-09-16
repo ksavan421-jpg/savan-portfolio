@@ -80,13 +80,22 @@ a {
 }
 
 /* Hide Netlify badge / drawer anywhere on website */
+html.nl-narrow {
+  display: none;
+}
+
 .nl-badge,
 #nl-badge,
 #nl-card,
 .nl-drawer,
+.nl-narrow,
 [aria-label*="Powered by Netlify"],
 [aria-controls="nl-card"],
-iframe[src*="netlify"] {
+iframe[src*="netlify"],
+iframe[title*="Netlify"],
+iframe[aria-label*="Netlify"],
+div[id*="netlify"],
+div[class*="netlify"] {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;

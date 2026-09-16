@@ -14,19 +14,44 @@
 
     <!-- Hide Netlify Badge anywhere on site -->
     <style>
+      html.nl-narrow {
+        display: none;
+      }
+
       .nl-badge,
       #nl-badge,
       #nl-card,
       .nl-drawer,
+      .nl-narrow,
       [aria-label*="Powered by Netlify"],
       [aria-controls="nl-card"],
-      iframe[src*="netlify"] {
+      iframe[src*="netlify"],
+      iframe[title*="Netlify"],
+      iframe[aria-label*="Netlify"],
+      div[id*="netlify"],
+      div[class*="netlify"] {
         display: none !important;
         opacity: 0 !important;
         visibility: hidden !important;
         pointer-events: none !important;
       }
     </style>
+    <script>
+      // Immediately remove Netlify badge iframe if injected
+      (function() {
+        function removeNetlifyBadge() {
+          var selectors = 'iframe[src*="netlify"], iframe[title*="Netlify"], iframe[aria-label*="Netlify"], #nl-badge, .nl-badge, #nl-card, .nl-drawer, [aria-label*="Powered by Netlify"]';
+          document.querySelectorAll(selectors).forEach(function(el) {
+            el.remove();
+          });
+        }
+        removeNetlifyBadge();
+        if (typeof MutationObserver !== 'undefined') {
+          var observer = new MutationObserver(removeNetlifyBadge);
+          observer.observe(document.documentElement, { childList: true, subtree: true });
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
