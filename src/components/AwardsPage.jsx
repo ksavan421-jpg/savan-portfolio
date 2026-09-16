@@ -30,8 +30,38 @@ const AWARDS_DATA = {
   month: [
     {
       id: 1,
-      src: '/award-1.webp',
-      alt: 'Certificate of Recognition - Employee of the Month',
+      src: '/employee-of-the-month/employee-of-the-monrth-01.webp',
+      alt: 'Certificate of Recognition - Employee of the Month 1',
+      title: 'Employee of the Month'
+    },
+    {
+      id: 2,
+      src: '/employee-of-the-month/employee-of-the-monrth-02.webp',
+      alt: 'Certificate of Recognition - Employee of the Month 2',
+      title: 'Employee of the Month'
+    },
+    {
+      id: 3,
+      src: '/employee-of-the-month/employee-of-the-monrth-03.webp',
+      alt: 'Certificate of Recognition - Employee of the Month 3',
+      title: 'Employee of the Month'
+    },
+    {
+      id: 4,
+      src: '/employee-of-the-month/employee-of-the-monrth-04.webp',
+      alt: 'Certificate of Recognition - Employee of the Month 4',
+      title: 'Employee of the Month'
+    },
+    {
+      id: 5,
+      src: '/employee-of-the-month/employee-of-the-monrth-05.webp',
+      alt: 'Certificate of Recognition - Employee of the Month 5',
+      title: 'Employee of the Month'
+    },
+    {
+      id: 6,
+      src: '/employee-of-the-month/employee-of-the-monrth-06.webp',
+      alt: 'Certificate of Recognition - Employee of the Month 6',
       title: 'Employee of the Month'
     }
   ],
@@ -44,10 +74,38 @@ const AWARDS_DATA = {
     }
   ],
   anniversary: [
-    // Add work anniversary certificates or photos here
+    {
+      id: 1,
+      src: '/anniversary/anniversary-second.webp',
+      alt: '2nd Work Anniversary Recognition',
+      title: '2nd Work Anniversary'
+    },
+    {
+      id: 2,
+      src: '/anniversary/anniversary-3rd.webp',
+      alt: '3rd Work Anniversary Recognition',
+      title: '3rd Work Anniversary'
+    },
+    {
+      id: 3,
+      src: '/anniversary/anniversary=4th.webp',
+      alt: '4th Work Anniversary Recognition',
+      title: '4th Work Anniversary'
+    },
+    {
+      id: 4,
+      src: '/anniversary/anniversary-5th.webp',
+      alt: '5th Work Anniversary Recognition',
+      title: '5th Work Anniversary'
+    }
   ],
   appreciation: [
-    // Add appreciation certificates or letters here
+    {
+      id: 1,
+      src: '/Appreciation.webp',
+      alt: 'Certificate of Appreciation',
+      title: 'Certificate of Appreciation'
+    }
   ]
 };
 
