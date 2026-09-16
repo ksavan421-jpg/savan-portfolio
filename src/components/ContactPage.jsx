@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ArrowRight, CheckCircle2, AlertCircle, Loader2, MessageCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import NavColumn from './NavColumn';
 import ArchitecturalBracket from './ArchitecturalBracket';
 
@@ -110,7 +110,7 @@ export default function ContactPage({
     } catch (err) {
       console.error('Submission error:', err);
       setStatus('error');
-      setErrorMessage('Unable to submit right now. Please message directly on WhatsApp or Email below.');
+      setErrorMessage('Unable to submit right now. Please message directly via Email or Phone below.');
     }
   };
 
@@ -162,15 +162,6 @@ export default function ContactPage({
                   >
                     SEND ANOTHER MESSAGE
                   </button>
-                  <a
-                    href={`https://wa.me/918178618336?text=${encodeURIComponent(`Hi Savan, I just submitted a message on your portfolio! (${formData.name})`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="contact-whatsapp-quick-btn"
-                  >
-                    <MessageCircle size={16} />
-                    <span>Chat on WhatsApp</span>
-                  </a>
                 </div>
               </div>
             ) : (
@@ -292,17 +283,6 @@ export default function ContactPage({
                 id="contact-phone-link"
               >
                 +918178618336
-              </a>
-
-              <a
-                href="https://wa.me/918178618336?text=Hi%20Savan,%20I%20would%20like%20to%20connect%20with%20you!"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact-direct-link contact-whatsapp-link"
-                id="contact-whatsapp-link"
-                title="Open WhatsApp chat with Savan"
-              >
-                WhatsApp
               </a>
             </div>
           </div>
