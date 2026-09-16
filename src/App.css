@@ -2927,7 +2927,7 @@
   }
 
   .title-huge {
-    font-size: clamp(70px, 8vw, 42px) !important;
+    font-size: clamp(108px, 8vw, 42px) !important;
     white-space: normal !important;
     line-height: 1.05 !important;
   }
@@ -3373,7 +3373,7 @@
   }
 
   .title-huge {
-    font-size: clamp(70px, 8vw, 42px) !important;
+    font-size: clamp(108px, 8vw, 42px) !important;
   }
 
   .title-descriptor {
