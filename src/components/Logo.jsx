@@ -9,11 +9,13 @@ export default function Logo({ onClick }) {
       id="brand-logo"
     >
       <img 
-        src="/project-logo.svg" 
+        src="/project-logo.webp" 
         alt="SK Logo" 
         className="brand-logo-img block"
         width="46"
         height="51"
+        loading="eager"
+        decoding="async"
       />
     </button>
   );

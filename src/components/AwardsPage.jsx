@@ -30,7 +30,7 @@ const AWARDS_DATA = {
   month: [
     {
       id: 1,
-      src: '/award-1.png',
+      src: '/award-1.webp',
       alt: 'Certificate of Recognition - Employee of the Month',
       title: 'Employee of the Month'
     }
@@ -38,7 +38,7 @@ const AWARDS_DATA = {
   year: [
     {
       id: 1,
-      src: '/gallery/gallery-img-2.png',
+      src: '/gallery/gallery-img-2.webp',
       alt: 'Award Certificate - Employee of the Year',
       title: 'Employee of the Year'
     }
@@ -152,10 +152,12 @@ export default function AwardsPage({
         <div className="avatar-wrapper awards-avatar-wrapper">
           <img
             ref={avatarImgRef}
-            src="/award.png"
+            src="/award.webp"
             alt="Savan holding gold star design excellence award"
             className="avatar-image awards-avatar-image"
             draggable="false"
+            loading="eager"
+            decoding="async"
           />
         </div>
       </section>

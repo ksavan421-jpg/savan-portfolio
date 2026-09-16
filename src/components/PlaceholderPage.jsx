@@ -81,10 +81,12 @@ export default function PlaceholderPage({
         <div className="avatar-wrapper" ref={avatarWrapperRef}>
           <img
             ref={avatarImgRef}
-            src="/hero-img.png"
+            src="/hero-img.webp"
             alt="Savan 3D Avatar"
             className="avatar-image"
             draggable="false"
+            loading="eager"
+            decoding="async"
           />
         </div>
       </section>

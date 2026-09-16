@@ -127,10 +127,12 @@ export default function ContactPage({
         <div className="avatar-wrapper contact-avatar-wrapper">
           <img
             ref={avatarImgRef}
-            src="/contact.png"
+            src="/contact.webp"
             alt="Savan on phone call"
             className="avatar-image contact-avatar-image"
             draggable="false"
+            loading="eager"
+            decoding="async"
           />
         </div>
       </section>

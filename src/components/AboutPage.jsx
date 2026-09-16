@@ -8,25 +8,25 @@ const TABS = [
   {
     id: 'about-me',
     label: 'About Me',
-    image: '/about-me.png',
+    image: '/about-me.webp',
     alt: 'Savan - UI/UX & Web Designer'
   },
   {
     id: 'experience',
     label: 'Work Experience',
-    image: '/work-experience.png',
+    image: '/work-experience.webp',
     alt: 'Savan - Work Experience'
   },
   {
     id: 'education',
     label: 'Education',
-    image: '/Education.png',
+    image: '/Education.webp',
     alt: 'Savan - Education'
   },
   {
     id: 'hobbies',
     label: 'Hobbies',
-    image: '/Hobbies.png',
+    image: '/Hobbies.webp',
     alt: 'Savan - Hobbies'
   }
 ];
@@ -139,6 +139,8 @@ export default function AboutPage({
             alt={currentTabData.alt}
             className="avatar-image"
             draggable="false"
+            loading="eager"
+            decoding="async"
           />
         </div>
       </section>

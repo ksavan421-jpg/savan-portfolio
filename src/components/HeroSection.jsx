@@ -71,10 +71,13 @@ export default function HeroSection({
         >
           <img
             ref={avatarImgRef}
-            src="/hero-img.png"
+            src="/hero-img.webp"
             alt="3D Character Avatar of SK"
             className="avatar-image hero-avatar-img block select-none pointer-events-none"
             draggable="false"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
         </div>
       </section>

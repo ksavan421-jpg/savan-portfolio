@@ -10,7 +10,7 @@ const PROJECTS = [
     id: 'eldeco',
     title: 'Eldeco Group',
     tagline: 'Be Sure, Live Better',
-    image: '/work-1.png',
+    image: '/work-1.webp',
     liveUrl: 'https://www.eldecogroup.com/',
     hasFigma: true
   },
@@ -18,7 +18,7 @@ const PROJECTS = [
     id: 'ksons',
     title: 'K.Sons Group',
     tagline: 'Residential Township Commercial Hospitality',
-    image: '/work-2.png',
+    image: '/work-2.webp',
     liveUrl: 'https://ksons.in/',
     hasFigma: true
   }
@@ -63,6 +63,8 @@ export default function WorkPage({
                   alt={`${project.title} - ${project.tagline}`}
                   className="work-preview-img"
                   draggable="false"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 

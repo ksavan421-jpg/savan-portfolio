@@ -175,10 +175,12 @@ export default function SkillsPage({
         <div className="avatar-wrapper skills-avatar-wrapper">
           <img
             ref={avatarImgRef}
-            src="/skill.png"
+            src="/skill.webp"
             alt="Savan at computer desk flexing muscle"
             className="avatar-image skills-avatar-image"
             draggable="false"
+            loading="eager"
+            decoding="async"
           />
         </div>
       </section>

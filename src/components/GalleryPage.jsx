@@ -26,13 +26,13 @@ const GALLERY_DATA = {
   gtf: [
     {
       id: 1,
-      src: '/gallery/gallery-img-1.png',
+      src: '/gallery/gallery-img-1.webp',
       alt: 'Savan at Office - GTF Technologies',
       type: 'image'
     },
     {
       id: 2,
-      src: '/gallery/gallery-img-2.png',
+      src: '/gallery/gallery-img-2.webp',
       alt: 'Savan holding Award Certificate - GTF Technologies',
       type: 'image'
     },
@@ -244,10 +244,12 @@ export default function GalleryPage({
         <div className="avatar-wrapper gallery-avatar-wrapper">
           <img
             ref={avatarImgRef}
-            src="/gallery.png"
+            src="/gallery.webp"
             alt="Savan holding and interacting with iPad tablet"
             className="avatar-image gallery-avatar-image"
             draggable="false"
+            loading="eager"
+            decoding="async"
           />
         </div>
       </section>

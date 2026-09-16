@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
 const FIGMA_ARTBOARDS = [
-  { id: 'home', title: 'Home Page', src: '/portfolio/home page 1.png' },
-  { id: 'about', title: 'About Us', src: '/portfolio/about us 1.png' },
-  { id: 'team', title: 'Our Team', src: '/portfolio/our-team 1.png' },
-  { id: 'story', title: 'Our Story', src: '/portfolio/our-story 1.png' },
-  { id: 'microsite', title: 'Microsite', src: '/portfolio/microsite 1.png' },
-  { id: 'career', title: 'Career', src: '/portfolio/career 1.png' },
+  { id: 'home', title: 'Home Page', src: '/portfolio/home page 1.webp' },
+  { id: 'about', title: 'About Us', src: '/portfolio/about us 1.webp' },
+  { id: 'team', title: 'Our Team', src: '/portfolio/our-team 1.webp' },
+  { id: 'story', title: 'Our Story', src: '/portfolio/our-story 1.webp' },
+  { id: 'microsite', title: 'Microsite', src: '/portfolio/microsite 1.webp' },
+  { id: 'career', title: 'Career', src: '/portfolio/career 1.webp' },
 ];
 
 export default function FigmaWorkModal({ isOpen, onClose, projectTitle = 'Eldeco Group' }) {

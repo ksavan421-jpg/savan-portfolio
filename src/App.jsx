@@ -42,6 +42,27 @@ export default function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, [activeNav]);
 
+  // Preload all section avatars in background so tab transitions are 100% instant
+  useEffect(() => {
+    const imagesToPreload = [
+      '/about-me.webp',
+      '/work-experience.webp',
+      '/Education.webp',
+      '/Hobbies.webp',
+      '/skill.webp',
+      '/work-1.webp',
+      '/work-2.webp',
+      '/award.webp',
+      '/gallery.webp',
+      '/contact.webp'
+    ];
+
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   const handleLogoClick = () => {
     handleSelectNav('home');
   };
