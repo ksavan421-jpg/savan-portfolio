@@ -98,6 +98,7 @@ export default function FigmaWorkModal({ isOpen, onClose, projectTitle = 'Eldeco
   const trackRef = useRef(null);
   const isMouseDownRef = useRef(false);
   const startXRef = useRef(0);
+  const startYRef = useRef(0);
   const scrollLeftRef = useRef(0);
   const isDraggingRef = useRef(false);
   const velocityRef = useRef(0);
@@ -153,7 +154,7 @@ export default function FigmaWorkModal({ isOpen, onClose, projectTitle = 'Eldeco
     }
   }, [isOpen, projectTitle]);
 
-  // Desktop Mouse Drag-to-Slide & Horizontal Wheel Controller
+  // Desktop Mouse Drag-to-Slide, Mobile Touch Gesture & Horizontal Wheel Controller
   useEffect(() => {
     if (!isOpen) return;
 
@@ -231,7 +232,50 @@ export default function FigmaWorkModal({ isOpen, onClose, projectTitle = 'Eldeco
       setTimeout(() => {
         isDraggingRef.current = false;
         dragDistanceRef.current = 0;
-      }, 60);
+      }, 80);
+    };
+
+    // Mobile touch handlers for smooth scrolling and swipe detection
+    const handleTouchStart = (e) => {
+      if (!e.touches || e.touches.length === 0) return;
+      const touch = e.touches[0];
+
+      if (momentumRafRef.current) {
+        cancelAnimationFrame(momentumRafRef.current);
+        momentumRafRef.current = null;
+      }
+
+      isMouseDownRef.current = true;
+      isDraggingRef.current = false;
+      dragDistanceRef.current = 0;
+      startXRef.current = touch.pageX;
+      startYRef.current = touch.pageY;
+      scrollLeftRef.current = track.scrollLeft;
+      lastXRef.current = touch.pageX;
+      lastTimeRef.current = performance.now();
+      velocityRef.current = 0;
+    };
+
+    const handleTouchMove = (e) => {
+      if (!isMouseDownRef.current || !e.touches || e.touches.length === 0) return;
+      const touch = e.touches[0];
+      const diffX = Math.abs(touch.pageX - startXRef.current);
+      const diffY = Math.abs(touch.pageY - startYRef.current);
+      dragDistanceRef.current = Math.max(dragDistanceRef.current, diffX, diffY);
+
+      if (diffX > 6) {
+        isDraggingRef.current = true;
+        setIsDraggingState(true);
+      }
+    };
+
+    const handleTouchEnd = () => {
+      isMouseDownRef.current = false;
+      setIsDraggingState(false);
+      setTimeout(() => {
+        isDraggingRef.current = false;
+        dragDistanceRef.current = 0;
+      }, 180);
     };
 
     const handleWheel = (e) => {
@@ -250,6 +294,10 @@ export default function FigmaWorkModal({ isOpen, onClose, projectTitle = 'Eldeco
     track.addEventListener('mousedown', handleMouseDown);
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mouseup', handleMouseUp);
+    track.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd, { passive: true });
+    window.addEventListener('touchcancel', handleTouchEnd, { passive: true });
     track.addEventListener('wheel', handleWheel, { passive: false });
 
     return () => {
@@ -259,12 +307,16 @@ export default function FigmaWorkModal({ isOpen, onClose, projectTitle = 'Eldeco
       track.removeEventListener('mousedown', handleMouseDown);
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseup', handleMouseUp);
+      track.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchend', handleTouchEnd);
+      window.removeEventListener('touchcancel', handleTouchEnd);
       track.removeEventListener('wheel', handleWheel);
     };
   }, [isOpen]);
 
   const handleCardClick = (artboard) => {
-    if (isDraggingRef.current || dragDistanceRef.current > 5) {
+    if (isDraggingRef.current || dragDistanceRef.current > 6) {
       return;
     }
     setSelectedArtboard(artboard);

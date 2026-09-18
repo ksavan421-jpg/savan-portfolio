@@ -2568,7 +2568,7 @@ body:has(.artboard-lightbox-overlay) .cta-wrapper {
   cursor: grab;
   user-select: none;
   -webkit-user-select: none;
-  touch-action: pan-y pinch-zoom;
+  touch-action: pan-x pan-y;
   container-type: inline-size;
   container-name: figmaRight;
 }
@@ -2759,8 +2759,10 @@ body:has(.artboard-lightbox-overlay) .cta-wrapper {
   .figma-modal-backdrop {
     position: fixed !important;
     z-index: 99999 !important;
+    background: rgb(218 150 127) !important;
     padding: 16px 14px 20px;
     overflow-y: auto;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -2771,9 +2773,13 @@ body:has(.artboard-lightbox-overlay) .cta-wrapper {
     flex-direction: column;
     grid-template-columns: none;
     gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     height: auto;
     min-height: 100%;
     overflow: visible;
+    box-sizing: border-box;
   }
 
   .artboard-lightbox-overlay {
@@ -2830,24 +2836,47 @@ body:has(.artboard-lightbox-overlay) .cta-wrapper {
 
   .figma-modal-right {
     flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     padding: 6px 2px 18px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-x pan-y !important;
+    overscroll-behavior-x: contain !important;
+    box-sizing: border-box;
   }
 
   .figma-artboards-track {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
     gap: 14px;
+    width: max-content;
+    min-width: max-content;
   }
 
   .figma-artboard-card {
+    flex-shrink: 0;
     width: clamp(140px, 38vw, 180px);
     max-height: none;
+  }
+
+  .figma-modal-right.is-northwind .figma-artboard-card,
+  .figma-modal-right.is-aarya .figma-artboard-card {
+    width: clamp(180px, 62vw, 290px);
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: transparent;
   }
 }
 
 @media (max-width: 580px) {
   .figma-modal-backdrop {
+    background: rgb(218 150 127) !important;
     z-index: 99999 !important;
     padding: 12px 12px 18px;
   }
