@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="site-footer" id="site-footer" aria-label="Site Footer">
       <div className="site-footer-inner">
-        <p className="site-footer-copyright">Copyright © 2026 Savan</p>
+        <p className="site-footer-copyright">© 2026 SK — Designed &amp; Developed by Savan</p>
 
         {/* Original WhatsApp & Google Mail Social Icons */}
         <div className="site-footer-socials">

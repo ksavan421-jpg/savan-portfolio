@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import NavColumn from './NavColumn';
+import { useScrollJumper } from '../hooks/useScrollJumper';
 
 const TABS = [
   {
@@ -31,6 +32,8 @@ const TABS = [
   }
 ];
 
+const TAB_IDS = TABS.map((t) => t.id);
+
 const EXPERIENCES = [
   {
     id: 'gtf',
@@ -57,15 +60,30 @@ const EXPERIENCES = [
 
 export default function AboutPage({
   activeNav = 'about',
+  navDirection = 'forward',
   onSelectNav,
   onDownloadResume
 }) {
-  const [activeTab, setActiveTab] = useState('about-me');
+  const [activeTab, setActiveTab] = useState(() => (
+    navDirection === 'backward' ? 'hobbies' : 'about-me'
+  ));
   const [currentExpIndex, setCurrentExpIndex] = useState(0);
   const containerRef = useRef(null);
   const avatarWrapperRef = useRef(null);
   const avatarImgRef = useRef(null);
   const contentPanelRef = useRef(null);
+
+  const currentTabIndex = TAB_IDS.indexOf(activeTab);
+
+  // Desktop Scroll-Jumping: Step through tabs one by one, then jump to next/prev page
+  useScrollJumper({
+    containerRef,
+    items: TAB_IDS,
+    currentIndex: currentTabIndex >= 0 ? currentTabIndex : 0,
+    onStepChange: (idx) => handleTabClick(TAB_IDS[idx]),
+    onNextPage: () => onSelectNav('skills', 'forward'),
+    onPrevPage: () => onSelectNav('home', 'backward')
+  });
 
   const currentExp = EXPERIENCES[currentExpIndex];
 
@@ -150,19 +168,29 @@ export default function AboutPage({
         <div className="about-content-frame">
           {/* Architectural Bracket Line Framing the Content */}
           <div className="about-bracket-svg-container" aria-hidden="true">
+            {/* Desktop View: Left pointer extended towards avatar x2="-100" */}
             <svg
-              className="about-bracket-svg"
+              className="about-bracket-svg about-bracket-desktop"
               viewBox="0 0 100 480"
               fill="none"
               preserveAspectRatio="none"
             >
-              {/* Top horizontal line running above tabs */}
-              <line x1="60" y1="2" x2="160" y2="2" stroke="var(--frame-line)" strokeWidth="1.2" />
-              {/* Vertical spine */}
+              <line x1="60" y1="2" x2="300" y2="2" stroke="var(--frame-line)" strokeWidth="1.2" />
               <line x1="60" y1="2" x2="60" y2="478" stroke="var(--frame-line)" strokeWidth="1.2" />
-              {/* Left pointer towards avatar */}
+              <line x1="65" y1="210" x2="-100" y2="210" stroke="var(--frame-line)" strokeWidth="1.2" />
+              <line x1="60" y1="478" x2="300" y2="478" stroke="var(--frame-line)" strokeWidth="1.2" />
+            </svg>
+
+            {/* Mobile View: Original bracket untouched */}
+            <svg
+              className="about-bracket-svg about-bracket-mobile"
+              viewBox="0 0 100 480"
+              fill="none"
+              preserveAspectRatio="none"
+            >
+              <line x1="60" y1="2" x2="160" y2="2" stroke="var(--frame-line)" strokeWidth="1.2" />
+              <line x1="60" y1="2" x2="60" y2="478" stroke="var(--frame-line)" strokeWidth="1.2" />
               <line x1="10" y1="210" x2="60" y2="210" stroke="var(--frame-line)" strokeWidth="1.2" />
-              {/* Bottom horizontal line */}
               <line x1="60" y1="478" x2="140" y2="478" stroke="var(--frame-line)" strokeWidth="1.2" />
             </svg>
           </div>
@@ -258,11 +286,6 @@ export default function AboutPage({
                         >
                           <ChevronRight size={16} />
                         </button>
-                      </div>
-
-                      <div className="exp-scroll-cue">
-                        <span className="scroll-cue-bar"></span>
-                        <span className="scroll-cue-text">Keep Scrolling</span>
                       </div>
                     </div>
                   </div>

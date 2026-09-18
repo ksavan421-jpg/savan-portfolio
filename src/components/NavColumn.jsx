@@ -48,7 +48,7 @@ export default function NavColumn({
 
   return (
     <section className="hero-right-column flex flex-col justify-between items-end h-full text-right relative" aria-label="Site Navigation and Actions">
-      <nav className="vertical-nav flex flex-col items-end w-full" aria-label="Portfolio Navigation">
+      <nav className="vertical-nav flex flex-col items-end" aria-label="Portfolio Navigation">
         <ul className="nav-list flex flex-col items-end list-none w-full">
           {NAV_ITEMS.map((item) => {
             const isActive = activeNav === item.id;
@@ -79,10 +79,10 @@ export default function NavColumn({
           onMouseEnter={handleCtaMouseEnter}
           onMouseLeave={handleCtaMouseLeave}
           className="cta-resume-btn uppercase rounded-full inline-flex items-center justify-center cursor-pointer select-none bg-accent-terracotta text-btn-text"
-          id="download-resume-btn"
-          aria-label="Download Resume"
+          id="download-brochure-btn"
+          aria-label="Download Brochure"
         >
-          DOWNLOAD RESUME
+          DOWNLOAD BROCHURE
         </button>
       </div>
     </section>

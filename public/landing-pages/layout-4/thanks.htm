@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>thanks</title>
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.otp-form{width: 500px;margin: 25px auto;border-radius: 5px!important;padding: 40px;background-color: #fff;
+text-align: center;
+box-shadow: 0 2px 2px rgba(0,0,0,0.10), 0 2px 2px rgba(0,0,0,0.10);}
+.otp-form .btn-def{background-color: #C4956A;border: none;color: #fff;padding: 10px 25px;width: 100%;
+margin: 20px 0px;font-size: 16px;}
+.otp-form .form-control{padding: 12px 0px;border: 1px solid #ddd;width: 100%;}
+.otp-form .form-control::placeholder{padding-left: 15px;}
+
+.tank-cont {width: 100%;padding: 100px 0px;padding-bottom: 25px;text-align: center;background: #f9fbf4;}
+.sign-ys {width: 60px;height: 60px;margin: 0px auto;color: #4eae49;border: 1px solid #4eae49;border-radius: 50%;line-height: 60px;font-size: 20px;}
+.aros {position: relative;color: #4d8bc8;display: inline-block;text-transform: capitalize;cursor: pointer;}
+.aros:before {content: "\f177";position: absolute;top: 1px;left: -30px;width: 20px;height: 20px;font-family: fontawesome;color: #4d8bc8;}
+.thnu {width: 100%;float: left;}
+
+.editnumber{border-bottom: 1px solid #eee;margin-bottom: 15px;}
+
+.editnumber .l-section {
+background: white;padding: 8px 0px;
+text-align: left;position: relative;border-radius: 3px;}
+.editnumber .c-link {font-size: 0.875em;
+float: right;width: 40%;text-align: right;cursor: pointer;}
+.editnumber input, button {display: block;margin: 5px 0;
+padding: 12px 15px;border-radius: 2px;border: 1px solid #efefef;
+outline: none;-webkit-appearance: none;transition: all 0.2s ease-in-out;}
+.editnumber input:focus {border-color: #888;}
+.editnumber button {background: #1a1a1a;color: white;cursor: pointer;margin: 10px auto;
+transition: all 0.2s ease-in-out;margin-top: 1em;display: block;}
+.editnumber button[disabled] {background: #ECEFF1;border: 1px solid #CFD8DC;
+transition: all 0.2s ease-in-out;cursor: not-allowed;color: #B0BEC5;}
+.editnumber button[disabled]:hover {transition: all 0.2s ease-in-out;}
+.editnumber button:hover {opacity: 1;transition: all 0.2s ease-in-out;}
+.editnumber .form {clear: both;}
+.editnumber .form .box{display: flex;align-items: center;border: 1px solid #ccc;
+padding: 2px 15px;justify-content: space-between;}
+.editnumber .form .box input{border: none;padding: 5px;width: calc(100% - 100px);}
+.editnumber .form .box span{width: 100px;}
+.editnumber .form--disabled input {padding-left: 0;padding-top: 4px;
+border: 0 solid #efefef;background: white;height: auto;
+color: #31373b;font-size: 0.8em;transition: all 0.2s ease-in-out;}
+
+@media screen and (max-width: 575px) {
+.otp-form{width: 90%;padding: 15px;margin-top: 0;}
+.tank-cont{padding: 10px!important;}
+}
+
+
+
+</style>
+
+
+
+</head>
+<body style="background:#f9fbf4;text-align: center;">
+
+
+<div class="container" style="overflow: hidden;">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="tank-cont">
+      <div class="sign-ys"> <i class="fa fa-check" aria-hidden="true" style="margin-top:20px;"></i> </div>
+      <div class="thnu">
+        <h1 style="    font-weight: 600;
+    color: #827474;">Thank you!</h1>
+        <p style="line-height:30px;">Thank you for submitting your details.<br>
+          Our professional shall get in touch with you within two working hours. Stay with us.</p>
+      </div>
+
+
+        
+
+
+       </div>
+  </div>
+</div>
+
+
+
+  <div class="otp-form shadow">
+                            <header class="mb-2">
+                                <h4 class="text-2xl font-bold mb-1">Mobile Phone Verification</h4>
+                                <p class="text-[15px] text-slate-500">Enter the 4-digit verification code that was sent to your phone number.</p>
+                            </header>
+
+                            <div class="editnumber">
+                              <div class="container">
+                                <div class="l-section">
+                              <div class="form">
+                                <div class="box">
+                                <input type="text" name="name" value="+91-987456456">
+                                <span class="c-link js-toggleForm">edit</span>
+                                </div>
+                                <button type="submit" disabled>Get OTP</button>
+                              </div>
+                            </div>
+                              </div>
+                            </div>
+
+
+
+                            <input type="text" class="form-control" placeholder="Enter OTP">
+                            <button type="submit" class="btn-def">Verify</button>
+                            Didn't receive code? <a class="font-medium text-indigo-500 hover:text-indigo-600" href="#0">Resend</a>
+        </div>
+
+        <a href="https://www.51intl.com/elan-imperial/"><span class="aros">back to home</span></a>
+
+<script src="js/jquery.min.js"></script>
+<script>
+var form_ele = document.querySelector('.form');
+
+// Make everything disabled
+var disableFormEdit = function(selector) {    
+    selector.classList.remove('form--enabled');
+    selector.classList.add('form--disabled');
+    var elements = selector.querySelectorAll('input, select, button');
+    elements.forEach(function(element) {
+        element.disabled = true;
+    });
+}
+
+// Make everything enabled
+var enableFormEdit = function(selector) {    
+    var elements = selector.querySelectorAll('input, select, button');
+    elements.forEach(function(element) {
+        element.disabled = false;
+    });
+    selector.classList.remove('form--disabled');
+    selector.classList.add('form--enabled');
+}
+
+disableFormEdit(form_ele);
+
+document.querySelector('.js-toggleForm').addEventListener('click', function() {
+    // Get the status of the form
+    var form_status = form_ele.classList.contains('form--disabled') ? 'disabled' : 'enabled';
+    
+    // Check if disabled or enabled
+    switch (form_status) {
+        case 'disabled':
+            enableFormEdit(form_ele);
+            this.textContent = 'Update';
+            break;
+        case 'enabled':
+            disableFormEdit(form_ele);
+            this.textContent = 'Edit';
+            break;
+    }
+});
+</script>
+</body>
+</html>

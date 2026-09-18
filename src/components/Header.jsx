@@ -20,7 +20,7 @@ export default function Header({
   useEffect(() => {
     function updateClock() {
       const now = new Date();
-      
+
       // Calculate IST time (Asia/Kolkata)
       const istString = now.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' });
       const istDate = new Date(istString);
@@ -114,11 +114,11 @@ export default function Header({
 
   return (
     <>
-      <header className="site-header flex justify-between items-center w-full relative z-30" id="site-header">
+      <header className="site-header navbar flex justify-between items-center w-full relative z-30" id="site-header">
         <div className="header-left">
           <Logo onClick={onLogoClick} />
         </div>
-        
+
         <div className="header-right flex items-center gap-4 select-none" id="header-status">
           <div className="header-status-details flex flex-col items-end text-right">
             <div className="header-greeting">
@@ -129,6 +129,12 @@ export default function Header({
               <span className="location-divider opacity-70">-</span>
               <span className="location-text">{timeInfo.location}</span>
             </div>
+          </div>
+
+          {/* Desktop Only: Copyright Credit right of wish & time */}
+          <div className="header-desktop-copyright" id="header-desktop-credit">
+            <span className="header-copyright-title">© 2026 SK. All rights reserved.</span>
+            <span className="header-copyright-subtitle">Designed &amp; Developed by Savan</span>
           </div>
 
           {/* Clickable Mobile Menu Hamburger Button (shown on mobile, hidden on desktop) */}
@@ -150,13 +156,13 @@ export default function Header({
       </header>
 
       {/* Mobile Navigation Drawer & Backdrop */}
-      <div 
+      <div
         className={`mobile-nav-backdrop ${isMobileMenuOpen ? 'open' : ''}`}
         onClick={() => setIsMobileMenuOpen(false)}
         aria-hidden={!isMobileMenuOpen}
       />
 
-      <div 
+      <div
         className={`mobile-nav-drawer ${isMobileMenuOpen ? 'open' : ''}`}
         aria-hidden={!isMobileMenuOpen}
         role="dialog"

@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Real Estate</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content=""/>
+  <meta name="keywords" content="" />
+  <link rel="icon" type="image/png" sizes="32x32" href="">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+<style type="text/css">
+    .d-view{display:block;}
+    .m-view{display:none;}
+    @media(max-width:600px){
+    .d-view{display:none;}
+    .m-view{display:block;}    
+    }
+</style>
+
+
+
+</head>
+<body>
+
+<div class="container-fluid mobile-navbar">
+    <div class="row">
+        <div class="col-6">
+            <img src="images/developer-logo-2.png" alt="" class="img-fluid developer-logo-mobile">
+        </div>
+        <div class="col-6 toggle-button">
+            <img src="images/icons/menu.png" alt="" class="img-fluid menubar-mobile">
+        </div>
+    </div>
+</div>
+
+
+<div class="main-container">
+    <div class="left-main-container myNav">
+        <div class="developer-logo-box">
+            <img src="images/developer-logo-2.png" alt="" class="img-fluid developer-logo-2">
+        </div>
+        <div class="fixed-side-menu">
+            <ul>
+                <li><a href="#home" class="toggle-button" onclick="closeNav()"> Home</a></li>
+                <li><a href="#about-us" class="toggle-button"> About Us</a></li>
+                <li><a href="#highlights" class="toggle-button"> Highlights</a></li>
+                <li><a href="#price-list" class="toggle-button"> Price List</a></li>
+                <li><a href="#amenities" class="toggle-button"> Amenities</a></li>
+                <li><a href="#floor-plan" class="toggle-button"> Floor Plan</a></li>
+                <li><a href="#location" class="toggle-button"> Location</a></li>
+                <li><a href="#gallery" class="toggle-button"> Gallery</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Contact Us</a></li>
+            </ul>
+        <div class="back-top" data-toggle="modal" data-target="#myModal">
+            <button type="button" class="btn btn-top"> Download <br>Brochure</button>
+        </div>
+        </div>
+    </div>
+    <div class="right-main-container">
+        
+
+<!---------------- Slider Section Codes Start From Here --------------->
+<div class="container-fluid slider_container">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12 col-md-6 col-lg-7 left_custom_col" id="home">
+            <!-- <div class="developer-logo-img d-view"><img src="images/developer-logo.png" alt="" class="img-fluid "></div> -->
+            <div id="demo" class="carousel slide" data-ride="carousel">
+               <!-- The slideshow -->
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <img src="images/slider-banner/slider-img-2.jpg" alt="Los Angeles" class="img-fluid slider-img">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="images/slider-banner/slider-img-2.jpg" alt="Los Angeles" class="img-fluid slider-img">
+                  </div>
+               </div>
+               <div class="custom-controls">
+                  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                  <img src="images/icons/left-arrow.png" alt="" class="img-fluid left-arrow-img">
+                  </a>
+                  <a class="carousel-control-next" href="#demo" data-slide="next">
+                  <img src="images/icons/right-arrow.png" alt="" class="img-fluid right-arrow-img">
+                  </a>
+               </div>
+               <div class="offer-box">
+                  <div class="f-box">
+                     <p>Payment Plan <span>40-40-20</span></p>
+                  </div>
+               </div>
+            </div>
+            <div class="top-two-box">
+               <div class="box-1">
+                  <h4 class="top-price-list-heading">Location Advantage</h4>
+                  <div class="marquee">
+                     <div>
+                        <span>Okhla Bird Sanctuary, 4.5 km</span>
+                        <span>Delhi Noida Direct Flyway, 5.2 km</span>
+                        <span>Mall Of India - 4.5 Km</span>
+                        <span>Okhla Bird Sanctuary, 4.5 km</span>                            
+                     </div>
+                  </div>
+               </div>
+               <div class="box-2">
+                  <h4 class="top-price-list-heading">Price List</h4>
+                  <div id="demo2" class="carousel slide" data-ride="carousel">
+                     <!-- Indicators -->
+                     <ul class="carousel-indicators">
+                        <li data-target="#demo2" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo2" data-slide-to="1"></li>
+                        <li data-target="#demo2" data-slide-to="2"></li>
+                     </ul>
+                     <!-- The slideshow -->
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="price-box">
+                              <div class="flex-box">2 BHK</div>
+                              <div class="flex-box">652 Sq.Ft.</div>
+                              <div class="flex-box"><img src="images/icons/rupee-indian-black.png" alt="" class="img-fluid bed-icon"> 92 Lacs*</div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="price-box">
+                              <div class="flex-box">3 BHK</div>
+                              <div class="flex-box">852 Sq.Ft.</div>
+                              <div class="flex-box"><img src="images/icons/rupee-indian-black.png" alt="" class="img-fluid bed-icon"> 1.20 Cr*</div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="price-box">
+                              <div class="flex-box">4 BHK</div>
+                              <div class="flex-box">1020 Sq.Ft.</div>
+                              <div class="flex-box"><img src="images/icons/rupee-indian-black.png" alt="" class="img-fluid bed-icon"> 2.50 Cr*</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-12 col-md-6 col-lg-5 right_custom_col">
+            <div class="side-content">
+               <span class="new-launch blink-hard2">New Launch</span>
+               <h1 class="project-heading">Demo Properties</h1>
+               <p class="typology-heading">2, 3 & 4 BHK APARTMENTS</p>
+               <h2 class="location-heading">At Location Here</h2>
+               <p class="starting-price-heading">Price Start From <span><img src="images/icons/rupee-indian.png" alt="" class="img-fluid bed-icon"> 92 Lacs*</span></p>
+               <p class="home-features-heading">Home Features</p>
+               <ul class="home-features-ul">
+                  <li><img src="images/icons/checked.png" alt="Project Name Here" class="img-fluid check-img"> 3 Modern Bedrooms</li>
+                  <li><img src="images/icons/checked.png" alt="Project Name Here" class="img-fluid check-img"> Open Modern Kitchen</li>
+                  <li><img src="images/icons/checked.png" alt="Project Name Here" class="img-fluid check-img"> Top Security System</li>
+                  <li><img src="images/icons/checked.png" alt="Project Name Here" class="img-fluid check-img"> World Class Amenities</li>
+               </ul>
+            </div>
+            <div class="side-content-2">
+               <div class="form-top">
+                  <h2 class="">Send A Message! <span> <img src="images/icons/envelope.png" alt="" class="img-fluid envelop-img"> </span></h2>
+                  <input type="text" name="name" class="form-control" placeholder="Name" id="qSenderName1">
+                  <input type="text" name="Mobile No." class="form-control number-only" placeholder="Mobile No" id="qMobileNo1">
+                  <input type="email" name="email" class="form-control email-address" placeholder="E-Mail Address" id="qEmailID1">
+                  <input class="form-control" type="text" placeholder="Message" name="Message" id="qMessage1">
+                  <button type="button" class="btn btn-form" id="SubmitQuery1">Submit Now</button> 
+                  <span class="ivr-number">Call Us: +91-999-999-9999</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!---------------- Slider Section Codes End From Here --------------->
+
+<div class="form-box">
+   <div class="top_form">
+      <h2 class="blink-hard">Send A Message! <span> <img src="images/icons/envelope.png" alt="Project Name Here" class="img-fluid envelop-img"> </span></h2>
+   </div>
+   <div class="pricelistdiv12" style="display: block;">
+      <div class="from-banner">
+         <div class="form_content">
+            <div class="pricelistdiv12" style="display: block;">
+               <div class="form_inner">
+                  <input type="text" name="name" class="form-control" placeholder="Name" id="qSenderName2">
+                  <input type="text" name="Mobile No." class="form-control number-only" placeholder="Mobile No" id="qMobileNo2">
+                  <input type="email" name="email" class="form-control email-address" placeholder="E-Mail Address" id="qEmailID2">
+                  <input class="form-control" type="text" placeholder="Comments.." name="Message" id="qMessage2">
+                  <button type="button" class="btn btn-warning enquire-btn" id="SubmitQuery2">Submit Now</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<span class="menubarFixed-2">+91-999-999-9999</span>
+
+<!---------------- Overview Section Codes Start From Here --------------->
+<div class="container-fluid overview-contaier" id="about-us">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 left_col">
+            <p class="sub-heading">About Us</p>
+            <h4>Opening Doors To,<br> Your Perfect Home.</h4>
+            <p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            <div class="key-highlights-overview">
+               <div class="content-1">
+                  <img src="images/icons/scale.png" alt="Project Name Here" class="img-fluid">
+                  <div class="box">
+                     <p class="heading-1">1250 Sq.Ft.</p>
+                     <p class="heading-2">Total Area</p>
+                  </div>
+               </div>
+               <div class="content-1">
+                  <img src="images/icons/24-hours.png" alt="Project Name Here" class="img-fluid securityhours-img">
+                  <div class="box">
+                     <p class="heading-1">24 Hours</p>
+                     <p class="heading-2">Security</p>
+                  </div>
+               </div>
+            </div>
+            <button type="button" class="btn btn-download-brochure" data-toggle="modal" data-target="#myModal">Download Brochure</button>
+         </div>
+         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 right_col">
+            <div class="overview-img">
+               <div class="overview-img-box-2">
+                  <div class="row">
+                     <div class="col-sm-12">
+                        <img src="images/overview-img-2.jpg" alt="Project Name Here" class="img-fluid overview-img-1">
+                     </div>
+                     <div class="col-sm-12">
+                        <img src="images/overview-img-3.jpg" alt="Project Name Here" class="img-fluid overview-img-1" style="margin-top:10px;">
+                     </div>
+                  </div>
+               </div>
+               <div class="overview-img-box-1">
+                  <img src="images/overview-img.jpg" alt="Project Name Here" class="img-fluid overview-img-1">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!---------------- Overview Section Codes End From Here --------------->
+<!---------------- Highlights Section Codes Start From Here --------------->
+<div class="container-fluid highlights-container" id="highlights">
+        <img src="images/values-one-shape-1.png" alt="TARC Tripundra" class="img-fluid pricelist-img-bg">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12 col-md-6 col-lg-6 right_col">
+            <div class="right_col_box">
+               <p class="project-name-highlight">Project Name - Location</p>
+               <img src="images/highlight-img.jpg" alt="" class="img-fluid">
+               <p class="number-p">Get In Touch With Us <span><a href="tel:9999-99-9999">9999-99-9999</a></span></p>
+            </div>
+         </div>
+         <div class="col-sm-12 col-md-6 col-lg-6 left_col">
+            <div class="row">
+               <div class="col-sm-12">
+                  <p class="sub-heading">Why Choose Us?</p>
+                  <h4>Infuse your home <br>with values of smart living</h4>
+               </div>
+            </div>
+            <div class="row left_col_row-inside">
+               <div class="col-sm-12">
+                  <div class="highlight-box">
+                     <p>Lorem Ipsum is simply dummy text of the printing and</p>
+                  </div>
+                  <div class="highlight-box">
+                     <p>Lorem Ipsum is simply dummy text of the printing and</p>
+                  </div>
+                  <div class="highlight-box">
+                     <p>Lorem Ipsum is simply dummy text of the printing and</p>
+                  </div>
+                  <div class="highlight-box">
+                     <p>Lorem Ipsum is simply dummy text of the printing and</p>
+                  </div>
+                  <div class="highlight-box">
+                     <p>Lorem Ipsum is simply dummy text of the printing and</p>
+                  </div>                  
+                  <button type="button" class="btn btn-download-brochure" data-toggle="modal" data-target="#myModal">Schedule Site Visit</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!---------------- Highlights Section Codes End From Here --------------->
+<!---------------- Price List Section Codes Start From Here --------------->
+<div class="container-fluid pricelist-container" id="price-list">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12 text-center">
+            <p class="sub-heading">Price List</p>
+            <h4>Quality That Fits Your Budget</h4>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-sm-12 col-md-12">
+            <div class="row">
+               <div class="col-sm-12 col-md-6 col-lg-4">
+                  <div class="price-list-box">
+                     <h4>2 BHK</h4>
+                     <div class="pricelist-content">
+                        <p class="type"><span>Type</span> Apartment</p>
+                        <p class="price-size"><span>Size</span> 650 Sq.Ft.</p>
+                     </div>
+                     <p class="price-start">Price Start From <span> <img src="images/rupee-indian.png" alt="Project Name Here" class="img-fluid rupees-icon">94 Lacs*</span></p>
+                  </div>
+                  <button type="button" class="btn btn-pricelist" data-toggle="modal" data-target="#myModal">INTERESTED</button>
+               </div>
+               <div class="col-sm-12 col-md-6 col-lg-4">
+                  <div class="price-list-box">
+                     <h4>3 BHK</h4>
+                     <div class="pricelist-content">
+                        <p class="type"><span>Type</span> Apartment</p>
+                        <p class="price-size"><span>Size</span> 650 Sq.Ft.</p>
+                     </div>
+                     <p class="price-start">Price Start From <span>94 Lacs*</span></p>
+                  </div>
+                  <button type="button" class="btn btn-pricelist" data-toggle="modal" data-target="#myModal">INTERESTED</button>
+               </div>
+               <div class="col-sm-12 col-md-6 col-lg-4">
+                  <div class="price-list-box">
+                     <h4>4 BHK</h4>
+                     <div class="pricelist-content">
+                        <p class="type"><span>Type</span> Apartment</p>
+                        <p class="price-size"><span>Size</span> 650 Sq.Ft.</p>
+                     </div>
+                     <p class="price-start">Price Start From <span>94 Lacs*</span></p>
+                  </div>
+                  <button type="button" class="btn btn-pricelist" data-toggle="modal" data-target="#myModal">INTERESTED</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!---------------- Price List Section Codes End From Here --------------->
+<!---------------- Amenities Section Codes Start From Here --------------->
+  <div class="container-fluid amenities-container" id="amenities">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                  <p class="sub-heading">Amenities</p>
+                  <h4>Elevate Your Lifestyle<br> With Exquisite Amenities  </h4>
+              </div>
+              <div class="col-sm-12 col-md-8 col-lg-8">
+                  <div class="row">
+                      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                          <div class="amenities-box">
+                            <img src="images/amenities/playground.png" alt="Project Name Here" class="img-fluid amenities-icon">
+                            <p>Kids Play Area</p>
+                          </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                          <div class="amenities-box">
+                            <img src="images/amenities/swimming-pool.png" alt="Project Name Here" class="img-fluid amenities-icon">
+                            <p>Swimming Pool</p>
+                          </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                          <div class="amenities-box">
+                            <img src="images/amenities/tennis-court.png" alt="Project Name Here" class="img-fluid amenities-icon">
+                            <p>Tennis Court</p>
+                          </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                          <div class="amenities-box">
+                            <img src="images/amenities/dumbbell.png" alt="Project Name Here" class="img-fluid amenities-icon">
+                            <p>Gym</p>
+                          </div>
+                      </div>  
+                      
+                      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                          <div class="amenities-box">
+                            <img src="images/amenities/facial-massage.png" alt="Project Name Here" class="img-fluid amenities-icon">
+                            <p>Spa</p>
+                          </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                          <div class="amenities-box">
+                            <img src="images/amenities/parking.png" alt="Project Name Here" class="img-fluid amenities-icon">
+                            <p>Car Parking</p>
+                          </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                          <div class="amenities-box">
+                            <img src="images/amenities/basketball-court.png" alt="Project Name Here" class="img-fluid amenities-icon">
+                            <p>Basketball</p>
+                          </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                          <div class="amenities-box">
+                            <img src="images/amenities/dog.png" alt="Project Name Here" class="img-fluid amenities-icon">
+                            <p>Pet Park</p>
+                          </div>
+                      </div>                                                                                       
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!---------------- Amenities Section Codes End From Here --------------->
+  <!---------------- Floor Plan Section Codes Start From Here --------------->
+    <div class="container-fluid floorplan-container" id="floor-plan">
+        <img src="images/values-one-shape-1.png" alt="Project Name Here" class="img-fluid pricelist-img-bg">
+       <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+                <p class="sub-heading m-view">Floors & Master Plan</p>
+                <h4 class="m-view">Experience Elevated  <br> Comfort In Every Detail </h4>
+                <p class="m-view">The luxury apartment floor plan is a seamless fusion of exquisite design and unrivaled comfort. Step into a world of grandeur as you enter the spacious foyer, adorned with tasteful embellishments and refined finishes. </p>
+            </div>
+             <div class="col-sm-12 col-md-6 col-lg-6">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                   <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#floorplan-1">2 BHK Floor Plan</a>
+                   </li>
+                   <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#floorplan-2">3 BHK Floor Plan</a>
+                   </li>
+                   <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#floorplan-3">Master Plan</a>
+                   </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                   <div class="tab-pane container active" id="floorplan-1">
+                      <img src="images/floorplan/floorplan-1.jpg" alt="Project Name Here" class="img-fluid floor-plan-img">
+                   </div>
+                   <div class="tab-pane container fade" id="floorplan-2">
+                      <img src="images/floorplan/floorplan-2.jpg" alt="Project Name Here" class="img-fluid floor-plan-img">
+                   </div>
+                   <div class="tab-pane container fade" id="floorplan-3">
+                      <img src="images/floorplan/floorplan-1.jpg" alt="Project Name Here" class="img-fluid floor-plan-img">
+                   </div>
+                </div>
+             </div>
+             <div class="col-sm-12 col-md-6 col-lg-6">
+                <p class="sub-heading d-view">Floors & Master Plan</p>
+                <h4 class="d-view">Experience Elevated  <br> Comfort In Every Detail </h4>
+                <p class="d-view">The luxury apartment floor plan is a seamless fusion of exquisite design and unrivaled comfort. Step into a world of grandeur as you enter the spacious foyer, adorned with tasteful embellishments and refined finishes. </p>
+                <ul class="floorplan-ul">
+                   <li><span>Total area:</span> 680 metre square</li>
+                   <li><span>Total Floor:</span> 24 Floor</li>
+                   <li><span>Parking Lot:</span> 5 Large</li>
+                   <li><span>Social Area:</span> 860 m²</li>
+                </ul>
+                <button type="button" class="btn btn-download-brochure" data-toggle="modal" data-target="#myModal">Download Brochure</button>
+             </div>
+          </div>
+       </div>
+    </div>
+    <!---------------- Floor Plan Section Codes End From Here --------------->
+    <!---------------- Amenities Section Codes Start From Here --------------->
+    <div class="container-fluid location-container" id="location">
+        <div class="container">
+           <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                 <p class="sub-heading">Location Advantage</p>
+                 <h4>
+                    Embrace The Perfect <br>Location Advantage
+                 </h4>
+                 <p>Check Our Project Connectivity </p>
+                 <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                       <a class="nav-link active" data-toggle="tab" href="#school">
+                       <img src="images/icons/school.png" alt="" class="img-fluid location-icon"> Schools
+                       </a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" data-toggle="tab" href="#mall">
+                       <img src="images/icons/shopping-center.png" alt="" class="img-fluid location-icon"> Malls
+                       </a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" data-toggle="tab" href="#GroceryShop"><img src="images/icons/food.png" alt="Project Name Here" class="img-fluid location-icon"> Grocery Shops</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" data-toggle="tab" href="#Connectivity"><img src="images/icons/seoul-metro-logo.png" alt="Project Name Here" class="img-fluid location-icon"> Connectivity</a>
+                    </li>
+                 </ul>
+                 <!-- Tab panes -->
+                 <div class="tab-content">
+                    <div class="tab-pane active" id="school">
+                       <ul class="location-content-ul">
+                          <li><span> 15 Mits </span> Walking Distance from Location</li>
+                          <li><span> 15 Mits </span> Walking Distance from Location</li>
+                          <li><span> 13 Mits </span> Walking Distance from Location</li>
+                          <li><span>20 Mits </span> Walking Distance from Location</li>
+                       </ul>
+                    </div>
+                    <div class="tab-pane fade" id="mall">
+                       <ul class="location-content-ul">
+                          <li><span>15 Mits </span> Walking Distance from Location</li>
+                          <li><span>15 Mits </span> Walking Distance from Location</li>
+                          <li><span>13 Mits </span> Walking Distance from Location</li>
+                          <li><span>20 Mits </span> Walking Distance from Location</li>
+                       </ul>                        
+                    </div>
+                    <div class="tab-pane fade" id="GroceryShop">
+                       <ul class="location-content-ul">
+                          <li><span>5 Mits </span> Walking Distance from Location</li>
+                          <li><span>15 Mits </span> Walking Distance from Location</li>
+                          <li><span>13 Mits </span> Walking Distance from Location</li>
+                          <li><span>20 Mits </span> Walking Distance from Location</li>
+                       </ul>                        
+                    </div>
+                    <div class="tab-pane fade" id="Connectivity">
+                       <ul class="location-content-ul">
+                          <li><span>5 Mits </span> Walking Distance from Location</li>
+                          <li><span>15 Mits </span> Walking Distance from Location</li>
+                          <li><span>13 Mits </span> Walking Distance from Location</li>
+                          <li><span>20 Mits </span> Walking Distance from Location</li>
+                       </ul>                        
+                    </div>
+                 </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                 <img src="images/location-map.jpg" alt="Project Name Here" class="img-fluid location-map-img">
+              </div>
+           </div>
+        </div>
+    </div>
+    <!---------------- Amenities Section Codes End From Here --------------->
+    <!---------------- Gallery Section Codes Start From Here --------------->
+    <div class="container-fluid gallery-container" id="gallery">
+                <img src="images/values-one-shape-1.png" alt="Project Name Here" class="img-fluid pricelist-img-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                 <p class="sub-heading">Images Gallery</p>
+                 <h4>
+                   A Tapestry of <br>Timeless Beauty
+                 </h4>
+                </div>     
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <a href="images/gallery/image-3.jpg" class="with-caption image-link" title="Image 1">
+                        <img src="images/gallery/image-3.jpg" alt="Project Name Here" class="img-fluid gallery-img">
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <a href="images/gallery/image-1.jpg" class="with-caption image-link" title="Image 2">
+                        <img src="images/gallery/image-1.jpg" alt="Project Name Here" class="img-fluid gallery-img">
+                    </a>                    
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <a href="images/gallery/image-2.jpg" class="with-caption image-link" title="Image 3">
+                        <img src="images/gallery/image-2.jpg" alt="Project Name Here" class="img-fluid gallery-img">
+                    </a>                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!---------------- Gallery Section Codes End From Here --------------->
+
+    <!---------------- Contact Section Codes Start From Here --------------->
+    <div class="container-fluid contact-container" id="contact-us">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="location-content">
+                    <p class="sub-heading">About Developer</p>
+                    <h4>Embrace The Perfect <br>Developer's Edge!</h4>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+
+                    <p class="rera-number">RERA No. : XXXXXXXXXXXXXX</p>
+                    <p class="rera-number">PROJECTS RERA No. : XXXXXXXXXXXXXX</p>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                 <img src="images/footer-img.jpg" alt="Project Name Here" class="img-fluid footer-img">
+            </div>
+        </div>
+    </div>
+    <!---------------- Contact Section Codes End From Here --------------->
+
+    <div class="container-fluid last-container text-center">
+        <p>Disclaimer :- This message contains information which is confidential and the copyrights of our company or a third party.</p>
+        <p>Project Registration No. | Agent Registration No. </p>
+        <p>Digital Media Planned by:<a href="http://www.gtftechnologies.com/" target="_blank"> GTF Technologies </a> | <a href="https://www.google.com/partners/agency?id=6096246672" target="_blank">Google Partner <img src="https://www.gstatic.com/partners/badge/images/2021/PartnerBadgeClickable.svg" class="google-partner" width="20px"> </a> 
+        </p>
+        <p><a href="disclaimer.html">Disclaimer &amp; Privacy Policy</a></p>
+    </div>
+
+    </div>
+</div>
+
+
+<div class="mobile-section-1"> 
+    <div class="mobile-section"> 
+      <a href="#" class="btn btn-success btn-block" title="Enquire Now" data-toggle="modal" data-target="#myModal">  Enquire Now</a> 
+      <a href="https://api.whatsapp.com/send?phone=+91-XXXXXX &amp;text=Hello, Looking for project name &amp; location name. Get in touch with me my name is" class="btn btn-success btn-block middle-button">Whats App</a> 
+      <a href="tel:+91-XXXXXXXXX" class="btn btn-success btn-block"> Tap To Call</a> 
+    </div>
+</div>
+
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="modal-form">
+               <img src="images/developer-logo-2.png" alt="Project Name Here" class="img-fluid developer-logo-img">
+               <h4 class="modal-typology-heading">2, 3 & 4 BHK APARTMENTS</h4>
+               <h4 class="form_heading_2"><img src="images/icons/envelope.png" alt="" class="img-fluid form_img"> Send A Message ! </h4>
+               <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Enter Name" id="qSenderNamemodal">
+               </div>
+               <div class="form-group">
+                  <input type="email" class="form-control email-address" placeholder="Enter Email" id="qEmailIDmodal">
+               </div>
+               <div class="form-group">
+                  <input type="text" class="form-control number-only" placeholder="Enter Number" id="qMobileNomodal">
+               </div>
+               <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Enter Comments" id="qMessagemodal">
+               </div>
+               <button type="button" class="btn btn-custom" id="SubmitQuerymodal">Submit Now</button>                          
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+
+  <script type="text/javascript" language="javascript">
+      var versionUpdate = (new Date()).getTime();
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "https://api2.gtftech.com/scripts/queryform.min.ssl.js?v=" + versionUpdate;
+      document.body.appendChild(script);
+  </script>
+  <script>
+     var AgentInfo = {
+         "vAgentID": "",
+         "vProject": "",
+         "vURL": "",
+         "thankspageurl": "/thanks.htm",
+     };
+
+     //Needs to be duplicate in the case of multiple forms on the same page
+     //--------------------------------------------------------------------------------------//
+     $('#preferedtime').hide();
+
+     $("#SubmitQuery").click(function () {
+         var FormInfo = {
+             "SenderControlID": "qSenderName",
+             "SenderControlMobileID": "qMobileNo",
+             "SenderControlEmailID": "qEmailID",
+             "SenderControlMsgID": "qMessage"
+         };
+
+         SubmitQueryData(AgentInfo, FormInfo);
+     });
+
+     $("#SubmitQuery1").click(function () {
+         var FormInfo = {
+             "SenderControlID": "qSenderName1",
+             "SenderControlMobileID": "qMobileNo1",
+             "SenderControlEmailID": "qEmailID1",
+             "SenderControlMsgID": "qMessage1"
+         };
+
+         SubmitQueryData(AgentInfo, FormInfo);
+     });    
+
+     $("#SubmitQuery2").click(function () {
+         var FormInfo = {
+             "SenderControlID": "qSenderName2",
+             "SenderControlMobileID": "qMobileNo2",
+             "SenderControlEmailID": "qEmailID2",
+             "SenderControlMsgID": "qMessage2"
+         };
+
+         SubmitQueryData(AgentInfo, FormInfo);
+     });  
+
+     $("#SubmitQuery3").click(function () {
+         var FormInfo = {
+             "SenderControlID": "qSenderName3",
+             "SenderControlMobileID": "qMobileNo3",
+             "SenderControlEmailID": "qEmailID3",
+             "SenderControlMsgID": "qMessage3"
+         };
+
+         SubmitQueryData(AgentInfo, FormInfo);
+     }); 
+
+     $("#SubmitQuerymodal").click(function () {
+         var FormInfo = {
+             "SenderControlID": "qSenderNamemodal",
+             "SenderControlMobileID": "qMobileNomodal",
+             "SenderControlEmailID": "qEmailIDmodal",
+             "SenderControlMsgID": "qMessagemodal"
+         };
+
+         SubmitQueryData(AgentInfo, FormInfo);
+     });
+
+
+   $("#SubmitQueryfooter").click(function () {
+         var FormInfo = {
+             "SenderControlID": "qSenderNamefooter",
+             "SenderControlMobileID": "qMobileNofooter",
+             "SenderControlEmailID": "qEmailIDfooter",
+             "SenderControlMsgID": "qMessagefooter"
+         };
+
+         SubmitQueryData(AgentInfo, FormInfo);
+     });
+
+     //--------------------------------------------------------------------------------------//
+   </script>
+   <!--------------------- Images Zooming Plugin  ----------------->
+   <script>
+   $('.without-caption').magnificPopup({
+     type: 'image',
+     closeOnContentClick: true,
+     closeBtnInside: false,
+     mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+     image: {
+         verticalFit: true
+     },
+     zoom: {
+         enabled: true,
+         duration: 300 // don't foget to change the duration also in CSS
+     }
+     });
+
+     $('.with-caption').magnificPopup({
+     type: 'image',
+     closeOnContentClick: true,
+     closeBtnInside: false,
+     mainClass: 'mfp-with-zoom mfp-img-mobile',
+     image: {
+         verticalFit: true,
+         titleSrc: function(item) {
+           return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank"></a>';
+         }
+     },
+     zoom: {
+         enabled: true
+     }
+   });
+   </script>
+    <!--------------------- End Here Images Zooming Plugin  ----------------->
+    <!---------------------  Menu Set With Section Plugin  Plz Add This Class nav-link-custom in Your a Tag ----------------->
+  <script>
+         $('.nav-link-custom').on('click',function (e) {
+           // e.preventDefault();
+         
+           var target = this.hash,
+           $target = $(target);
+         
+          $('html, body').stop().animate({
+            'scrollTop': $target.offset().top-70
+           }, 500, 'swing', function () {
+            window.location.hash = target;
+           });
+         });
+         
+   </script>
+   <!--------------------- End Here Menu Set With Section Plugin  Plz Add This Class nav-link-custom in Your a Tag ----------------->
+   <!-------------------For Close Your Navbar In Mobile On Click A Tag  ------------------------>
+  <script>
+   $(document).ready(function(){
+     $(".nav-item-2").click(function(){
+       $(".collapse").removeClass("show");
+     });
+   });
+   </script>
+
+   <!------------------- End Here For Close Your Navbar In Mobile On Click A Tag  ------------------------>
+
+    <script>
+        $(document).ready(function () {
+
+            $(window).scroll(function () {
+
+                if ($(window).width() > 768 && $(this).scrollTop() > 300) {
+
+                    $(".pricelistdiv12").slideUp(500);
+
+                }
+                else {
+                    $(".pricelistdiv12").slideDown(500);
+
+                }
+
+            });
+
+            $(".top_form h2").click(function () {
+                $(".pricelistdiv12").slideToggle();
+                $(".mybtn").toggleClass("fa-plus-circle");
+                $(".mybtn").toggleClass("fa-minus-circle");
+            });
+        });
+
+    </script>
+ <script>
+$(window).scroll(function(){
+    if ($(this).scrollTop() > 500) {
+       $('.menubarFixed-2').addClass('menubarFixed');
+    } else {
+       $('.menubarFixed-2').removeClass('menubarFixed');
+    }
+});
+</script>
+ 
+ <script>
+    $(document).ready(function(){
+  $(".menubar-mobile").click(function(){
+    $(".").toggleClass("main");
+  });
+});
+ </script>
+
+    <script>
+   $(window).scroll(function(){
+       if ($(this).scrollTop() > 250) {
+          $('.form-box').addClass('newClass');
+       } else {
+          $('.form-box').removeClass('newClass');
+       }
+   });
+   </script>
+<!-- <script>
+
+$(document).ready(function() {
+  // Add "active" class to clicked menu item
+  $('ul li a').click(function() {
+    $('li a').removeClass("active");
+    $(this).addClass("active");
+  });
+
+  // Add "active" class to menu item when section touches top
+  $(window).scroll(function() {
+    var currentPosition = $(window).scrollTop();
+    var activeSectionId = null;
+
+    $('div').each(function() {
+      var top = $(this).offset().top;
+      var bottom = top + $(this).outerHeight();
+
+      if (currentPosition >= top && currentPosition <= bottom) {
+        activeSectionId = $(this).attr('id');
+      }
+    });
+
+    if (activeSectionId) {
+      $('ul li a').removeClass('active');
+      $('ul li a[href="#' + activeSectionId + '"]').addClass('active');
+    }
+  });
+});
+
+</script> -->
+
+<script>
+$(document).ready(function() {
+      $('.toggle-button').on('click', function() {
+        var windowWidth = $(window).width();
+        if (windowWidth <= 768) {
+          $('.myNav').toggleClass('modified');
+        }
+      });
+    });
+</script>
+
+</body>
+</html>

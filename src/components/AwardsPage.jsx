@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react';
 import { ArrowRight, ChevronLeft, ChevronRight, ZoomIn, Award } from 'lucide-react';
 import NavColumn from './NavColumn';
 import ArchitecturalBracket from './ArchitecturalBracket';
+import { useScrollJumper } from '../hooks/useScrollJumper';
 
 // 4 Award Categories requested by user
 const AWARDS_TABS = [
@@ -24,6 +25,8 @@ const AWARDS_TABS = [
     label: 'Appreciation'
   }
 ];
+
+const TAB_IDS = AWARDS_TABS.map((t) => t.id);
 
 // Award media organized by category
 const AWARDS_DATA = {
@@ -56,12 +59,6 @@ const AWARDS_DATA = {
       id: 5,
       src: '/employee-of-the-month/employee-of-the-monrth-05.webp',
       alt: 'Certificate of Recognition - Employee of the Month 5',
-      title: 'Employee of the Month'
-    },
-    {
-      id: 6,
-      src: '/employee-of-the-month/employee-of-the-monrth-06.webp',
-      alt: 'Certificate of Recognition - Employee of the Month 6',
       title: 'Employee of the Month'
     }
   ],
@@ -111,6 +108,7 @@ const AWARDS_DATA = {
 
 export default function AwardsPage({
   activeNav = 'awards',
+  navDirection = 'forward',
   onSelectNav,
   onDownloadResume
 }) {
@@ -120,12 +118,26 @@ export default function AwardsPage({
   const slideRef = useRef(null);
   const touchStartX = useRef(null);
 
-  const [activeTab, setActiveTab] = useState('month');
+  const [activeTab, setActiveTab] = useState(() => (
+    navDirection === 'backward' ? 'appreciation' : 'month'
+  ));
   const [currentAwardIndex, setCurrentAwardIndex] = useState(0);
   const [activeAward, setActiveAward] = useState(null);
 
   const currentAwards = AWARDS_DATA[activeTab] || [];
   const currentItem = currentAwards[currentAwardIndex] || null;
+  const currentTabIndex = TAB_IDS.indexOf(activeTab);
+
+  // Desktop Scroll-Jumping: Step through tabs one by one, then jump to next/prev page
+  useScrollJumper({
+    containerRef,
+    items: TAB_IDS,
+    currentIndex: currentTabIndex >= 0 ? currentTabIndex : 0,
+    onStepChange: (idx) => handleTabClick(TAB_IDS[idx]),
+    onNextPage: () => onSelectNav('gallery', 'forward'),
+    onPrevPage: () => onSelectNav('work', 'backward'),
+    disabled: Boolean(activeAward)
+  });
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
@@ -223,8 +235,36 @@ export default function AwardsPage({
       {/* 2. Center Column with Bracket and Certificate Slider */}
       <section className="hero-center-column awards-center-column" aria-label="Recognition & Awards">
         <div className="center-content-wrapper awards-content-frame">
-          <div className="bracket-wrapper awards-bracket-wrapper">
-            <ArchitecturalBracket className="editorial-bracket" />
+          <div className="bracket-wrapper awards-bracket-wrapper" aria-hidden="true">
+            <div className="architectural-bracket-container editorial-bracket">
+              {/* Desktop View: Architectural Bracket with x1="10" */}
+              <svg
+                className="architectural-bracket-svg architectural-bracket-desktop"
+                viewBox="0 0 160 420"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <line x1="140" y1="2" x2="300" y2="2" stroke="var(--frame-line)" strokeWidth="1.2" />
+                <line x1="140" y1="2" x2="140" y2="418" stroke="var(--frame-line)" strokeWidth="1.2" />
+                <line x1="10" y1="172" x2="140" y2="172" stroke="var(--frame-line)" strokeWidth="1.2" />
+                <line x1="140" y1="418" x2="300" y2="418" stroke="var(--frame-line)" strokeWidth="1.2" />
+              </svg>
+
+              {/* Mobile View: Original bracket */}
+              <svg
+                className="architectural-bracket-svg architectural-bracket-mobile"
+                viewBox="0 0 160 420"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <line x1="140" y1="2" x2="158" y2="2" stroke="var(--frame-line)" strokeWidth="1.2" />
+                <line x1="140" y1="2" x2="140" y2="418" stroke="var(--frame-line)" strokeWidth="1.2" />
+                <line x1="0" y1="172" x2="140" y2="172" stroke="var(--frame-line)" strokeWidth="1.2" />
+                <line x1="140" y1="418" x2="158" y2="418" stroke="var(--frame-line)" strokeWidth="1.2" />
+              </svg>
+            </div>
           </div>
 
           <div className="awards-main-body" ref={contentRef}>

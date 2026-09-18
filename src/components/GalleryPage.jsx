@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ArrowRight, ChevronLeft, ChevronRight, Play, ZoomIn, Image as ImageIcon } from 'lucide-react';
 import NavColumn from './NavColumn';
-import ArchitecturalBracket from './ArchitecturalBracket';
+import { useScrollJumper } from '../hooks/useScrollJumper';
 
 // 3 Company Tabs matching user's work experience
 const COMPANY_TABS = [
@@ -20,6 +20,8 @@ const COMPANY_TABS = [
     label: 'Chahar Technologies'
   }
 ];
+
+const TAB_IDS = COMPANY_TABS.map((t) => t.id);
 
 // Gallery media organized by company
 const GALLERY_DATA = {
@@ -147,6 +149,7 @@ const GALLERY_DATA = {
 
 export default function GalleryPage({
   activeNav = 'gallery',
+  navDirection = 'forward',
   onSelectNav,
   onDownloadResume
 }) {
@@ -156,12 +159,26 @@ export default function GalleryPage({
   const slideRef = useRef(null);
   const touchStartX = useRef(null);
 
-  const [activeTab, setActiveTab] = useState('gtf');
+  const [activeTab, setActiveTab] = useState(() => (
+    navDirection === 'backward' ? 'chahar' : 'gtf'
+  ));
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [activePhoto, setActivePhoto] = useState(null);
 
   const currentPhotos = GALLERY_DATA[activeTab] || [];
   const currentItem = currentPhotos[currentPhotoIndex] || null;
+  const currentTabIndex = TAB_IDS.indexOf(activeTab);
+
+  // Desktop Scroll-Jumping: Step through tabs one by one, then jump to next/prev page
+  useScrollJumper({
+    containerRef,
+    items: TAB_IDS,
+    currentIndex: currentTabIndex >= 0 ? currentTabIndex : 0,
+    onStepChange: (idx) => handleTabClick(TAB_IDS[idx]),
+    onNextPage: () => onSelectNav('contact', 'forward'),
+    onPrevPage: () => onSelectNav('awards', 'backward'),
+    disabled: Boolean(activePhoto)
+  });
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
@@ -258,16 +275,46 @@ export default function GalleryPage({
       <section className="hero-center-column gallery-center-column" aria-label="Some Memories">
 
 
-        <h1 className="gallery-heading">Some Memories</h1>
+        {/* Mobile View: Heading outside bracket */}
+        <h1 className="gallery-heading gallery-heading-mobile">Some Memories</h1>
 
         <div className="center-content-wrapper gallery-content-frame">
-          <div className="bracket-wrapper gallery-bracket-wrapper">
-            <ArchitecturalBracket className="editorial-bracket" />
+          <div className="bracket-wrapper gallery-bracket-wrapper" aria-hidden="true">
+            <div className="architectural-bracket-container editorial-bracket">
+              {/* Desktop View: Architectural Bracket with x1="0" */}
+              <svg
+                className="architectural-bracket-svg architectural-bracket-desktop"
+                viewBox="0 0 160 420"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <line x1="140" y1="2" x2="300" y2="2" stroke="var(--frame-line)" strokeWidth="1.2" />
+                <line x1="140" y1="2" x2="140" y2="418" stroke="var(--frame-line)" strokeWidth="1.2" />
+                <line x1="0" y1="172" x2="140" y2="172" stroke="var(--frame-line)" strokeWidth="1.2" />
+                <line x1="140" y1="418" x2="300" y2="418" stroke="var(--frame-line)" strokeWidth="1.2" />
+              </svg>
+
+              {/* Mobile View: Original bracket */}
+              <svg
+                className="architectural-bracket-svg architectural-bracket-mobile"
+                viewBox="0 0 160 420"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <line x1="140" y1="2" x2="158" y2="2" stroke="var(--frame-line)" strokeWidth="1.2" />
+                <line x1="140" y1="2" x2="140" y2="418" stroke="var(--frame-line)" strokeWidth="1.2" />
+                <line x1="0" y1="172" x2="140" y2="172" stroke="var(--frame-line)" strokeWidth="1.2" />
+                <line x1="140" y1="418" x2="158" y2="418" stroke="var(--frame-line)" strokeWidth="1.2" />
+              </svg>
+            </div>
           </div>
 
-
-
           <div className="gallery-main-body" ref={contentRef}>
+            {/* Desktop View: Heading top of tabs */}
+            <h1 className="gallery-heading gallery-heading-desktop">Some Memories</h1>
+
             {/* Top 3 Company Tabs Navigation */}
             <nav className="about-tabs-nav gallery-tabs-nav" aria-label="Company Gallery Tabs">
               {COMPANY_TABS.map((tab) => {

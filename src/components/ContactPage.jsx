@@ -4,15 +4,23 @@ import { useGSAP } from '@gsap/react';
 import { ArrowRight, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import NavColumn from './NavColumn';
 import ArchitecturalBracket from './ArchitecturalBracket';
+import { useScrollJumper } from '../hooks/useScrollJumper';
 
 export default function ContactPage({
   activeNav = 'contact',
+  navDirection = 'forward',
   onSelectNav,
   onDownloadResume
 }) {
   const containerRef = useRef(null);
   const avatarImgRef = useRef(null);
   const contentRef = useRef(null);
+
+  // Desktop Scroll-Jumping: up -> gallery
+  useScrollJumper({
+    containerRef,
+    onPrevPage: () => onSelectNav('gallery', 'backward')
+  });
 
   const [formData, setFormData] = useState({
     name: '',

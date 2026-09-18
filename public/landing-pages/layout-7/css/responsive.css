@@ -1,0 +1,328 @@
+
+@media(max-width:1600px){
+
+.container { max-width: 90%;}
+
+.custom-navbar .nav-link {font-size: 14px;}
+.custom-navbar .nav-item {margin-left: 5px;margin-right: 5px;}
+.custom-navbar .navbar-brand { font-size: 24px;}
+.custom-navbar {padding-top: 5px; padding-bottom: 5px;}
+.custom-navbar .last-li {margin-right: -112px;margin-left: 94px;}
+.custom-navbar .navbar-brand .developer-log-img {margin-left: 0;height: 68px;}
+.custom-navbar .last-li {padding: 0 17px;padding-top: 5px;}
+
+.slider-container .form-box {padding: 25px;width: 24%;bottom: 9%;right: 45px;z-index: 99;}
+.slider-container .form-box .form-control {height: 45px;margin-bottom: 10px;}
+.slider-container .form-box h4 {font-size: 26px;}
+.slider-container .form-box .btn-custom-2 {padding: 7px 30px;}
+.slider-container #demo .top-details-content h3 { font-size: 40px;}
+.slider-container #demo .top-details-content h1 .project-name-img {width: auto;height: 100px;}
+.slider-container .key-highlights li {font-size: 15px;margin-bottom:5px;}
+.slider-container .key-highlights .star-img {height: 16px;}
+.slider-container #demo .top-details-content h3 {font-size: 36px;margin-top: 15px;}
+.contact-us-container .form-box {padding: 25px;}
+.slider-container .key-highlights {margin-top: 3px;}
+.slider-container #demo .starting-price-box p {font-size: 22px;}
+.slider-container #demo .starting-price-box h4 {font-size: 54px;}
+.slider-container .form-box .shapeforbtn {bottom: 9%;right: 10%;height: 44px;}
+.slider-container #demo .top-details-content .location-heading {font-size: 15px;}
+
+
+.overview-container .shapeforbtn { margin-left: 18px;margin-top: 0px;width: auto;height: 51px;}
+.overview-container {padding-top: 90px;padding-bottom: 60px;}
+.overview-container .container {max-width: 90%;}
+.overview-container .overview-img::after {position: absolute; top: -3%;left: 15%;border: 10px solid #daa182;}
+.overview-container .shape-1 { top: -6%;right: 13%;}
+
+.highlights-container .sub-head-heading { font-size: 16px;}
+.highlights-container h4 {font-size: 38px;line-height: 44px;}
+.highlights-container .highlight-content ul li {margin-bottom: 8px;padding: 10px;font-size: 15px;}
+.highlights-container .highlight-content {padding: 30px 30px 30px;padding-bottom: 30px;}
+.highlights-container .box-highlight-point { margin-top: 24px;}
+.highlights-container .highlight-img { height: 100%;object-fit: cover;}
+.highlights-container .highlight-img-2 {height: 100%;object-fit: cover;}
+.highlights-container .highlight-content p {margin-top: 0px;}
+
+
+
+.pricelist-container {padding-top: 50px;padding-bottom: 25px;}
+.pricelist-container .col-12.col-sm-12.text-center { margin-bottom: 40px;}
+.pricelist-container .container {max-width: 90%;}
+.pricelist-container .pricebox .shapeforbtn {right: 8%; bottom: 16%;  height: 38px;}
+.pricelist-container .sub-head-heading {font-size: 16px;}
+.pricelist-container h4 {font-size: 36px;}
+
+
+.amenities-container {padding-top: 40px; padding-bottom: 40px;}
+.amenities-container .container {max-width: 90%;}
+.amenities-container .sub-head-heading {font-size: 16px;}
+.amenities-container h4 {font-size: 38px;line-height: 44px;}
+.amenities-container .btn-custom-2 { font-size: 15px;}
+.amenities-container .ami-box p {font-size: 19px;}
+
+.floorplan-container {padding-top: 50px;padding-bottom: 8px;}
+.floorplan-container .container {max-width: 90%;}
+.floorplan-container h4 {font-size: 38px;}
+
+.location-advantage-container h4 {font-size: 35px;line-height: 40px;}
+.location-advantage-container {padding-top: 60px;padding-bottom: 60px;}
+.location-advantage-container .container { max-width: 90%;}
+.location-advantage-container .location-map {height: 100%;width: 100%;object-fit: cover;}
+.location-advantage-container .location-content-box { margin: 10px; padding: 20px 20px;}
+.location-advantage-container::after { bottom: -26%;}
+
+.gallery-container .container { max-width: 90%;}
+
+.contact-us-container { padding-top: 60px;padding-bottom: 60px;}
+.contact-us-container .container {max-width: 90%;}
+
+.appointment-container .container {max-width: 90%;}
+.appointment-container h4 {font-size: 38px;}
+.appointment-container .sub-head-heading {font-size: 16px;}
+
+.about-developer p {font-size: 15px;letter-spacing: 0.5px;}
+.about-developer .container {max-width: 92%;}  
+.about-developer h4 {font-size: 38px;}
+.about-developer .sub-head-heading {font-size: 16px;}
+.location-advantage-container .location-content-box p {font-size: 20px;letter-spacing: 1.3px;padding-top: 20px;}
+.location-advantage-container .location-content-box img { height: 45px;}
+.location-advantage-container .location-content-box h4 {font-size: 30px;}
+.overview-container .side-top-content h4 {font-size: 42px;line-height: 44px;}
+
+.video-icon {margin-left: 25.5%;}
+
+.bank-logo {
+    width: auto;
+    height: 64px;
+    background-color: #fff;
+    margin-right: 6px;
+    padding: 10px;
+}
+.contact-us-container h5 {
+    font-size: 22px;
+    letter-spacing: 2.5px;;
+}
+
+    
+}
+
+@media(max-width:1480px){
+    
+    .container { max-width: 90%;}
+
+
+    
+}
+
+@media(max-width:1366px){
+    
+    .container { max-width: 90%;}
+    .custom-navbar .last-li {margin-right: -79px; margin-left: 66px;}
+    .overview-container .side-top-content h4 { font-size: 38px; line-height: 43px;}
+    .highlights-container h4 {font-size: 38px;line-height: 43px;}
+    .overview-container .side-top-content p {font-size: 15px;letter-spacing: 0.5px;}
+    .overview-container .side-top-content li {font-size: 16px;}
+    .overview-container .side-top-content .btn-custom { padding: 10px 15px;}
+    .location-advantage-container .para {font-size: 15px; letter-spacing: 0.5px;}
+    .location-advantage-container .location-content-box-2 p.para-2 {font-size: 15px;letter-spacing: 0.5px;}
+    .pricelist-container h4 {font-size: 38px;}
+    .video-icon {margin-left: 26.5%;}
+
+    .bank-logo {width: auto;height: 59px;}
+    
+}
+
+@media(max-width:1280px){
+    
+    .container { max-width: 90%;}
+    .custom-navbar .nav-link {font-size: 14px;}
+    .overview-container .side-top-content p {margin-top: 0px;}
+    .overview-container .side-top-content h4 {font-size: 36px;}
+    .overview-container .side-top-content .sub-head-heading { font-size: 15px;}
+    .overview-container .side-top-content p {font-size: 15px;}
+    .overview-container .side-top-content li {font-size: 16px;}
+    .overview-container .overview-img::after {top: -3%;left: 21%;}
+    .overview-container .shape-1 {top: -7%;  right: 8%;}
+    .highlights-container h4 {font-size: 36px;line-height: 40px;}
+    .pricelist-container h4 {font-size: 36px;}
+    .amenities-container h4 {font-size: 36px; line-height: 40px;}
+    .floorplan-container h4 { font-size: 36px;}
+    .floorplan-container .col-sm-12 {margin-bottom: 30px;}
+    .gallery-container h4 {font-size: 36px;}
+    .contact-us-container h4 { font-size: 36px;line-height: 40px;}
+    .video-icon {margin-left: 27.5%;}
+    .location-advantage-container .location-content-box { padding: 20px 10px;}
+
+
+    
+}
+
+@media screen and (max-width: 991px) and (min-width: 790px) {
+ .container { max-width: 90%;}
+ .contact-us-container .form-box {margin-left: unset;margin-top: 20px;}
+ .custom-navbar {padding-left: 0px; padding-right: 0px;}
+.location-advantage-container .right-col-2 {display: grid;align-items: center;margin-top: 20px;}
+.amenities-container .col-for-heading {margin-bottom:20px;}
+.slider-container .form-box {padding: 40px;width: 100%;position: unset;z-index: 9;bottom: 0;right: 0;z-index: 99;}
+.slider-container .carousel-item img {height: 68vh;width: 100%;}
+.slider-container #demo .top-details-content {margin-left: 14%;}
+.slider-container #demo .starting-price-box {margin-left: 15%;}
+.video-icon {margin-left: 42.9%;}
+.custom-navbar .nav-link {font-size: 9px;}
+.custom-navbar .navbar-brand .developer-log-img {height: 43px;}
+.navbar-expand-md .navbar-nav .nav-link {padding-right: 1px;padding-left: 0rem;}
+.custom-navbar .last-li {margin-right: 0;margin-left: 0;padding: 0 10px;}
+}
+
+@media(max-width:768px){
+
+.container { max-width: 100%;}
+
+.custom-navbar .navbar-brand .developer-log-img {width: auto; height: 44px;padding: 0;margin-left:0px;}
+.navbar-toggler .menubar-icon {width: auto;height: 37px;}
+.custom-navbar .last-li {margin-right: 0; margin-left: 0;}
+.custom-navbar {position: fixed;padding-top: 10px;padding-bottom: 10px; background-color: #fff;}
+.navbar-toggler.collapsed { padding-right: 0px;}
+
+.slider-container { margin-top: 70px;}
+.slider-container .form-box {position:unset; padding: 25px; width: 100%;bottom: 14%; right: 1px; z-index: 99;}
+.slider-container .carousel-item img {height: 65vh;object-fit: cover;}
+.slider-container #demo .top-details-content {margin-left: 4%; margin-bottom: -8%;}
+.slider-container #demo .top-details-content h3 {font-size: 34px; margin-top: 15px;width: 79%;}
+.slider-container #demo .carousel-control-prev {display: block;width: 40px;height: 40px;line-height: 46px;margin-left: auto;margin-right: -27px;}
+.slider-container #demo .carousel-control-next {display: block;width: 40px;height: 40px;line-height: 47px;margin-top: 20px;margin-left: auto;margin-right: -27px;}
+.slider-container #demo .slider-controler {right: 50px;left: unset;z-index: 999;width: fit-content;}
+.slider-container #demo .starting-price-box {margin-left: 4%;padding-bottom: 0;}
+.slider-container #demo .starting-price-box p {font-size: 18px;}
+.slider-container #demo .starting-price-box h4 {font-size: 48px;}
+.slider-container .form-box .shapeforbtn {bottom: 3%;right: 24%; height: 44px;}
+
+.overview-container {padding-top: 70px;padding-bottom: 40px;}
+.overview-container .container { max-width: 100%;}
+.overview-container .side-img-box {display: none;}
+.overview-container .side-top-content ul {;justify-content: space-between;}
+.overview-container .side-top-content li {font-size: 17px;display: flex;align-items: baseline;}
+.side-top-content { margin-top: 20px;}
+.overview-container .side-top-content h4 {font-size: 30px;line-height: 34px;}
+.overview-container .side-top-content .sub-head-heading {font-size: 15px;letter-spacing: 4.3px;}
+.video-icon {margin-left: 54.5%;}
+
+.highlights-container .sub-head-heading {font-size: 15px;letter-spacing: 4.3px;}
+.highlights-container h4 {font-size: 30px;line-height: 34px;}
+.highlights-container .box-highlight-point .custom-row .custom-col {width: calc(100% - 0px);margin-bottom: 20px;}
+.highlights-container .highlight-content p {width: 100%;}
+
+.amenities-container {padding-top: 20px;padding-bottom: 20px;}
+.amenities-container .container { max-width: 100%;}
+.amenities-container .ami-box {padding: 10px;}
+.amenities-container .ami-box .amenities-img{width: auto;height: 50px;}
+.amenities-container .ami-box p {font-size: 16px;letter-spacing: 1.4px;}
+.amenities-container .sub-head-heading {font-size: 14px;letter-spacing: 4.3px;}
+.amenities-container h4 {font-size: 24px;line-height: 28px;letter-spacing: 4.2px;}
+.amenities-container .btn-custom-2 {padding: 10px 15px;font-size: 14px;}
+.amenities-container .col-12.col-sm-12.col-md-4.col-lg-6.col-xl-6.col-for-heading {margin-bottom: 30px;}
+.amenities-container .container .col-6 {padding-left: 3px;padding-right: 3px;}
+.amenities-container .container {padding-right: 5px; padding-left: 5px;}
+
+
+.pricelist-container {padding-top: 50px;padding-bottom: 0px;}
+.pricelist-container .container { max-width: 100%;}
+.pricelist-container .col-12.col-sm-12.text-center {margin-bottom: 20px;}
+.pricelist-container .sub-head-heading {font-size: 14px;letter-spacing: 4.3px;}
+.pricelist-container h4 {font-size: 24px; line-height: 28px; letter-spacing: 4.2px;}
+.pricelist-container .pricebox {padding:15px15px;margin-bottom: 20px;}
+.pricelist-container .pricebox .price-list-heading {font-size: 20px;margin-bottom: 10px;margin-top: 15px;}
+.pricelist-container .pricebox .price {font-size: 45px;margin-bottom: 15px;}
+.pricelist-container .pricebox p {font-size: 24px; line-height: 36px;margin-top: 10px;margin-bottom: 10px;}
+.pricelist-container h4 {font-size: 34px;line-height: 32px;}
+.pricelist-container .pricebox .btn-custom {padding: 10px 25px;margin-top: 10px;font-size: 14px;}
+.pricelist-container .pricebox .shapeforbtn {right: 8%;bottom: 23%; height: 36px;}
+
+.floorplan-container {padding-top: 30px; padding-bottom: 20px;}
+.floorplan-container .container { max-width: 100%;}
+.floorplan-container .btn-custom-2 {padding: 10px 15px;margin-top: 20px;letter-spacing: 1px;position: unset;right: 0;top: 0;font-size: 14px;}
+.floorplan-container .floorplan-img { height: 140px;object-fit: cover;}
+.floorplan-box p {margin-bottom: 8px;margin-top: 8px;font-size: 20px;letter-spacing: 1.9px;margin-top: 10px;}
+.floorplan-container .col-sm-12.col-for-heading-2 {padding-left: 0px;padding-right: 0;}
+.floorplan-container h4 {font-size: 30px;line-height: 28px;}
+.floorplan-container .sub-head-heading { font-size: 15px;}
+
+.location-advantage-container { padding-top: 30px; padding-bottom: 30px;}
+.location-advantage-container .container {max-width: 100%;}
+.location-advantage-container .sub-head-heading {font-size: 16px;letter-spacing: 4.2px;}
+.location-advantage-container h4 {font-size: 30px;line-height: 34px;}
+.location-advantage-container .para { max-width: 100%;font-size: 15px;margin-top: 10px;}
+.location-advantage-container .location-content-box {margin: 0px; padding: 10px 10px;}
+.location-advantage-container .location-content-box p {font-size: 19px;letter-spacing: 1.8px;padding-top: 20px;width: 80%;line-height: 24px;}
+.location-advantage-container .custom-col-2 {max-width: calc(50% - 10px);width: calc(50% - 10px);margin-bottom: 21px;}
+.location-advantage-container .location-content-box img {height: 38px;top: 10px;right: 12px;}
+.location-advantage-container .custom-row-2 {margin-top: 30px;}
+.location-advantage-container .location-content-box h4 {font-size: 28px;}
+.location-advantage-container::after {display:none;}
+.location-advantage-container .nav-tabs .nav-link {font-size: 12px;}
+.location-advantage-container .nav-tabs .nav-link {margin-bottom: 0px;margin-left: 0px;font-size: 13px;padding-left: 6px;padding-right: 5px;letter-spacing: 0.5px;margin-top: 6px;}
+.location-advantage-container .nav-item {margin-left: 2px;}
+
+.gallery-container .container {max-width: 100%;}
+.gallery-container .col-6.col-sm-6.col-md-3.col-lg-3.col-xl-3 {padding-left: 5px;padding-right: 5px;margin-bottom: 7px;}
+.gallery-container .img-title-name {bottom: 15px;left: 6px;letter-spacing: 3.5px;font-size: 16px;}
+.gallery-container .gallery-img {object-fit: cover; height: 180px;}
+.gallery-container .sub-head-heading {font-size: 15px;letter-spacing: 4.3px;}
+.gallery-container h4 { font-size: 30px;line-height: 34px;}
+.gallery-container .col-12.col-sm-12.text-center {margin-bottom: 30px;}
+.gallery-container {padding-top: 30px; padding-bottom: 0px;}
+
+.about-developer .container { max-width: 100%;}
+.about-developer p {text-align: justify;}
+
+.contact-us-container .container {max-width: 100%;}
+.contact-us-container .form-box {padding: 40px; width: 100%;margin-left: auto;margin-top: 40px;}
+.contact-us-container h4 {font-size: 30px; line-height: 35px;}
+.contact-form-footer .ivr-heading {font-size: 22px;margin-top: 10px;}
+.contact-form-footer .call-us-mobile { height: 30px;}   
+.contact-us-container .sub-head-heading {font-size: 15px;letter-spacing: 4.3px;} 
+
+.appointment-container {padding-top: 30px;padding-bottom: 30px;}
+.appointment-container .container { max-width: 100%;}
+.appointment-container h4 {font-size: 30px; line-height: 34px;}
+.appointment-container .btn-custom-2 {padding: 10px 15px;margin-top: 10px;font-size: 15px;margin-top: 25px;margin-left: unset;}
+.mobile-section-1 {display:block;}
+.bank-logo {width: auto;height: 80px;}
+.bank-logo-row .logo-1 {width: 50%;text-align: center;}
+.location-advantage-container .nav.nav-tabs {margin-top: 20px;}
+
+
+}
+
+
+@media(max-width:480px){
+
+.slider-container #demo .top-details-content h1 .project-name-img {width: auto; height: 100px;}
+.slider-container #demo .top-details-content h3 {font-size: 24px; margin-top: 15px; width: 100%;}
+.slider-container #demo .starting-price-box { margin-left: 2%;padding-bottom: 0;}
+.slider-container #demo .starting-price-box h4 { font-size: 39px;}
+.slider-container .key-highlights li {font-size: 14px;margin-bottom: 5px;}
+.about-developer .container { padding-left: 0px;padding-right: 0px;}
+.slider-container .form-box h4 {font-size: 20px;}
+.overview-container .side-top-content h4 {font-size: 28px;line-height:32px;}
+.overview-container .side-top-content .btn-custom { padding: 10px 10px;}
+.overview-container .shapeforbtn {margin-left: 18px; height: 45px;}
+.overview-container .side-top-content ul {display: block;margin-top: 20px;}
+.overview-container .side-top-content li {width: 100%;}
+.highlights-container h4 { font-size: 28px;line-height: 32px;}
+.pricelist-container h4 {font-size: 28px;line-height: 32px;}
+.pricelist-container .pricebox .price {font-size: 40px;}
+.amenities-container h4 {font-size: 28px;line-height: 32px;}
+.amenities-container .col-for-heading { margin-bottom: 20px;}
+.floorplan-container h4 {font-size: 28px;line-height: 32px;}
+.location-advantage-container h4 {font-size: 28px;line-height: 31px;}
+.gallery-container h4 {font-size: 28px;line-height: 32px;}
+.amenities-container .col-for-heading { margin-bottom: 20px;}
+.gallery-container .col-6.col-sm-6.col-md-4.col-lg-3.col-xl-3 {padding-left: 5px;padding-right: 5px;}
+.contact-us-container { padding-top: 30px; padding-bottom: 40px;}
+.contact-us-container h4 {font-size: 28px;line-height: 32px;}
+.about-developer {padding-top: 30px;padding-bottom: 55px;}
+.about-developer .last-footer-content p {font-size: 12px;text-align: left!important;letter-spacing: 0px;}
+.contact-us-container .form-box {padding: 20px;}
+
+}

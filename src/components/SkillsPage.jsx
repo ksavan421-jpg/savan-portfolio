@@ -135,14 +135,24 @@ const SKILLS_COL_2 = [
   { name: 'CLAUDE AI', icon: <ClaudeIcon /> }
 ];
 
+import { useScrollJumper } from '../hooks/useScrollJumper';
+
 export default function SkillsPage({
   activeNav = 'skills',
+  navDirection = 'forward',
   onSelectNav,
   onDownloadResume
 }) {
   const containerRef = useRef(null);
   const avatarImgRef = useRef(null);
   const contentRef = useRef(null);
+
+  // Desktop Scroll-Jumping: down -> work, up -> about
+  useScrollJumper({
+    containerRef,
+    onNextPage: () => onSelectNav('work', 'forward'),
+    onPrevPage: () => onSelectNav('about', 'backward')
+  });
 
   useGSAP(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });

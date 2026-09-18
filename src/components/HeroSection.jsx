@@ -4,9 +4,11 @@ import { useGSAP } from '@gsap/react';
 import { ArrowRight } from 'lucide-react';
 import ArchitecturalBracket from './ArchitecturalBracket';
 import NavColumn from './NavColumn';
+import { useScrollJumper } from '../hooks/useScrollJumper';
 
 export default function HeroSection({
   activeNav = 'home',
+  navDirection = 'forward',
   onSelectNav,
   onDownloadResume
 }) {
@@ -18,6 +20,12 @@ export default function HeroSection({
   const row1Ref = useRef(null);
   const row2Ref = useRef(null);
   const bioRef = useRef(null);
+
+  // Desktop Scroll-Jumping to next page
+  useScrollJumper({
+    containerRef,
+    onNextPage: () => onSelectNav('about', 'forward')
+  });
 
   // GSAP Animations & Interactions
   useGSAP(() => {
