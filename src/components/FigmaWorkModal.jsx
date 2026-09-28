@@ -325,7 +325,17 @@ export default function FigmaWorkModal({ isOpen, onClose, projectTitle = 'Eldeco
   if (!isOpen) return null;
 
   return (
-    <div className="figma-modal-backdrop" onClick={onClose} role="dialog" aria-modal="true">
+    <div 
+      className="figma-modal-backdrop" 
+      onClick={onClose} 
+      role="dialog" 
+      aria-modal="true"
+      style={{
+        backdropFilter: 'blur(14px)',
+        WebkitBackdropFilter: 'blur(14px)',
+        backgroundColor: 'rgba(218, 150, 127, 0.85)'
+      }}
+    >
       <div className="figma-modal-container" onClick={(e) => e.stopPropagation()}>
         {/* Left Information Column */}
         <div className="figma-modal-left">
