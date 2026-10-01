@@ -1,168 +1,146 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { createPortal } from 'react-dom';
 import gsap from 'gsap';
+import { ArrowDown } from 'lucide-react';
 
 /**
  * CustomCursor
- * - Smooth dot trailing behind mouse pointer on desktop.
- * - Expands into an inverted difference lens when hovering text (text renders bright white inside the circle).
- * - Completely hides animation when hovering buttons, links, or interactive elements.
- * - Mounted directly into document.body to avoid any parent stacking context or layer isolation.
- * - Strictly active on fine pointer devices (mouse/trackpad), disabled on mobile and touch screens.
+ * - Crisp center pointer dot following the mouse cursor.
+ * - Animated trailing circle behind the mouse containing rotating "SCROLL DOWN • SCROLL DOWN •" text.
+ * - Automatically disappears/removes when hovering any link, button, or interactive clickable element.
+ * - Only active on fine pointer devices (desktop/trackpad), disabled on touchscreens.
  */
 export default function CustomCursor() {
-  const cursorRef = useRef(null);
-  const [mounted, setMounted] = useState(false);
-  const [cursorMode, setCursorMode] = useState('default'); // 'default' | 'text' | 'hidden'
+  const badgeRef = useRef(null);
+  const dotRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-  const hasMoved = useRef(false);
-  const xTo = useRef(null);
-  const yTo = useRef(null);
+  const isHovered = useRef(false);
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!mounted || typeof window === 'undefined') return;
-
-    // Only activate on devices with fine pointer (mouse / trackpad)
+    // Only activate on devices with mouse/trackpad
     const isFinePointer = window.matchMedia('(pointer: fine)').matches;
     if (!isFinePointer) return;
 
-    if (cursorRef.current) {
-      gsap.set(cursorRef.current, { xPercent: -50, yPercent: -50 });
-      xTo.current = gsap.quickTo(cursorRef.current, 'x', {
-        duration: 0.16,
-        ease: 'power3.out'
-      });
-      yTo.current = gsap.quickTo(cursorRef.current, 'y', {
-        duration: 0.16,
-        ease: 'power3.out'
-      });
-    }
+    const badge = badgeRef.current;
+    const dot = dotRef.current;
+    if (!badge || !dot) return;
 
-    const checkInteractive = (target) => {
-      if (!target || !(target instanceof Element)) return false;
+    // Center offsets
+    gsap.set(badge, { xPercent: -50, yPercent: -50, scale: 0, opacity: 0 });
+    gsap.set(dot, { xPercent: -50, yPercent: -50, opacity: 0 });
 
-      // Check standard clickable elements and interactive roles
-      if (
-        target.closest(
-          'a, button, [role="button"], input, textarea, select, label[for], ' +
-          '.page-nav-cta-btn, .about-tab-pill, .gallery-slider-btn, .gallery-slider-dot, ' +
-          '.gallery-slider-card, .footer-social-btn, .work-btn-figma, .figma-artboard-card, ' +
-          '.vertical-nav-item, .brand-logo-img, .brand-logo, .lightbox-overlay, .modal-close-btn, ' +
-          '[onclick], [tabindex="0"], [data-cursor="interactive"]'
-        )
-      ) {
-        return true;
-      }
+    const badgeXTo = gsap.quickTo(badge, 'x', { duration: 0.32, ease: 'power2.out' });
+    const badgeYTo = gsap.quickTo(badge, 'y', { duration: 0.32, ease: 'power2.out' });
 
-      // Check computed cursor style for pointer
-      try {
-        const computed = window.getComputedStyle(target);
-        if (computed && computed.cursor === 'pointer') {
-          return true;
-        }
-      } catch {
-        // ignore errors on pseudo / SVG elements
-      }
+    const dotXTo = gsap.quickTo(dot, 'x', { duration: 0.08, ease: 'power2.out' });
+    const dotYTo = gsap.quickTo(dot, 'y', { duration: 0.08, ease: 'power2.out' });
 
-      return false;
-    };
+    let firstMove = true;
 
-    const checkText = (target) => {
-      if (!target || !(target instanceof Element)) return false;
-
-      // Typography tags
-      const textTags = [
-        'H1', 'H2', 'H3', 'H4', 'H5', 'H6',
-        'P', 'LI', 'BLOCKQUOTE', 'STRONG', 'B', 'EM',
-        'SMALL', 'CITE', 'SPAN'
-      ];
-      if (textTags.includes(target.tagName)) {
-        const content = target.textContent?.trim();
-        if (content && content.length > 0 && !target.closest('svg')) {
-          return true;
-        }
-      }
-
-      // Portfolio specific text selectors across all pages
-      if (
-        target.closest(
-          'h1, h2, h3, h4, h5, h6, p, li, blockquote, ' +
-          '.hero-bio, .about-headline, .about-description, .exp-company, .exp-role, .exp-period, .exp-work, ' +
-          '.skills-heading, .work-main-heading, .awards-heading, .gallery-heading, .contact-heading, ' +
-          '.title-huge, .title-descriptor, .greeting-intro, .ampersand-accent, .site-footer-copyright, ' +
-          '.brand-name, .hero-lead-text, .section-heading, .editorial-stat, .stat-value, .stat-label, ' +
-          '.tab-label, .award-item-title, .award-item-org, .award-item-year, .award-item-desc, ' +
-          '.gallery-memory-title, .gallery-card-caption, .contact-detail-text, .contact-form-label'
-        )
-      ) {
-        return true;
-      }
-
-      return false;
-    };
-
-    const handleMouseMove = (e) => {
-      if (!hasMoved.current) {
-        hasMoved.current = true;
-        if (cursorRef.current) {
-          gsap.set(cursorRef.current, { x: e.clientX, y: e.clientY });
-        }
+    const onMouseMove = (e) => {
+      if (firstMove) {
+        firstMove = false;
         setIsVisible(true);
-      } else if (xTo.current && yTo.current) {
-        xTo.current(e.clientX);
-        yTo.current(e.clientY);
+        gsap.set([badge, dot], { x: e.clientX, y: e.clientY });
+        gsap.to(dot, { opacity: 1, duration: 0.2 });
+        if (!isHovered.current) {
+          gsap.to(badge, { scale: 1, opacity: 1, duration: 0.35, ease: 'back.out(1.7)' });
+        }
+      } else {
+        dotXTo(e.clientX);
+        dotYTo(e.clientY);
+        badgeXTo(e.clientX);
+        badgeYTo(e.clientY);
       }
-
-      const target = e.target;
-      if (!target || !(target instanceof Element)) return;
-
-      // 1. Hover on links or buttons: remove cursor animation completely until user moves off
-      if (checkInteractive(target)) {
-        setCursorMode('hidden');
-        return;
-      }
-
-      // 2. Hover on text: expand into difference lens so text renders white inside circle
-      if (checkText(target)) {
-        setCursorMode('text');
-        return;
-      }
-
-      // 3. Default state: black follower dot trailing behind pointer
-      setCursorMode('default');
     };
 
-    const handleMouseLeave = () => {
-      setIsVisible(false);
+    const isInteractive = (el) => {
+      if (!el || !(el instanceof Element)) return false;
+      return Boolean(
+        el.closest(
+          'a, button, [role="button"], input, textarea, select, label, ' +
+          '[tabindex]:not([tabindex="-1"]), [onclick], .cursor-pointer'
+        ) ||
+        window.getComputedStyle(el).cursor === 'pointer'
+      );
     };
 
-    const handleMouseEnter = () => {
-      setIsVisible(true);
+    const onMouseOver = (e) => {
+      if (isInteractive(e.target)) {
+        isHovered.current = true;
+        // Remove / hide the circle and "scroll down" text when hovering links or buttons
+        gsap.to(badge, { scale: 0, opacity: 0, duration: 0.2, ease: 'power2.inOut' });
+        gsap.to(dot, { scale: 1.8, backgroundColor: '#0033FF', duration: 0.2 });
+      }
     };
 
-    window.addEventListener('mousemove', handleMouseMove, { passive: true });
-    document.addEventListener('mouseleave', handleMouseLeave);
-    document.addEventListener('mouseenter', handleMouseEnter);
+    const onMouseOut = (e) => {
+      if (isInteractive(e.target)) {
+        isHovered.current = false;
+        // Bring back the trailing circle and "scroll down" text
+        gsap.to(badge, { scale: 1, opacity: 1, duration: 0.3, ease: 'power2.out' });
+        gsap.to(dot, { scale: 1, backgroundColor: '#ffffff', duration: 0.2 });
+      }
+    };
+
+    const onMouseLeaveWindow = () => {
+      gsap.to([badge, dot], { opacity: 0, duration: 0.2 });
+    };
+
+    const onMouseEnterWindow = () => {
+      gsap.to(dot, { opacity: 1, duration: 0.2 });
+      if (!isHovered.current) {
+        gsap.to(badge, { opacity: 1, duration: 0.2 });
+      }
+    };
+
+    window.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseover', onMouseOver);
+    document.addEventListener('mouseout', onMouseOut);
+    document.addEventListener('mouseleave', onMouseLeaveWindow);
+    document.addEventListener('mouseenter', onMouseEnterWindow);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseleave', handleMouseLeave);
-      document.removeEventListener('mouseenter', handleMouseEnter);
+      window.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('mouseover', onMouseOver);
+      document.removeEventListener('mouseout', onMouseOut);
+      document.removeEventListener('mouseleave', onMouseLeaveWindow);
+      document.removeEventListener('mouseenter', onMouseEnterWindow);
     };
-  }, [mounted]);
+  }, []);
 
-  if (!mounted || typeof document === 'undefined') return null;
+  return (
+    <>
+      {/* Precision cursor center dot */}
+      <div
+        ref={dotRef}
+        className="pointer-events-none fixed top-0 left-0 w-2 h-2 rounded-full bg-white z-[9999] mix-blend-difference hidden md:block"
+      />
 
-  return createPortal(
-    <div
-      ref={cursorRef}
-      className={`custom-cursor-lens cursor-mode-${cursorMode} ${isVisible ? 'is-visible' : 'is-hidden'}`}
-      aria-hidden="true"
-    />,
-    document.body
+      {/* Trailing circle with rotating "SCROLL DOWN" text */}
+      <div
+        ref={badgeRef}
+        className="pointer-events-none fixed top-0 left-0 w-20 h-20 rounded-full border border-white/40 bg-black/60 backdrop-blur-md z-[9998] shadow-[0_0_25px_rgba(0,51,255,0.4)] flex items-center justify-center select-none hidden md:flex"
+      >
+        {/* Rotating Circular Text: SCROLL DOWN • SCROLL DOWN • */}
+        <svg
+          className="w-full h-full absolute inset-0 animate-[spin_10s_linear_infinite]"
+          viewBox="0 0 100 100"
+        >
+          <path
+            id="cursorCirclePath"
+            d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"
+            fill="none"
+          />
+          <text className="text-[10px] font-bold fill-white tracking-[2.2px] uppercase">
+            <textPath href="#cursorCirclePath" startOffset="0%">
+              SCROLL DOWN • SCROLL DOWN • 
+            </textPath>
+          </text>
+        </svg>
+
+        {/* Center downward arrow */}
+        <ArrowDown className="w-3.5 h-3.5 text-[#0033FF] animate-bounce" />
+      </div>
+    </>
   );
 }
