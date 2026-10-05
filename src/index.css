@@ -233,3 +233,231 @@ html:not(.light) ::-webkit-scrollbar-track {
 .font-sans-ui {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
+/* ==========================================================================
+   ULTRA-WIDE & 1920px × 960px SCREEN ADAPTATIONS
+   Applies ONLY to screens >= 1720px width (such as 1920x960, 1920x1080).
+   Smaller laptops, tablets, and mobile screens remain 100% UNTOUCHED.
+   ========================================================================== */
+
+@media (min-width: 1720px) {
+  /* 1. Expand Global Max-Widths to utilize the 1920px canvas and eliminate dead side margins */
+  .max-w-7xl {
+    max-width: 1680px !important;
+  }
+
+  .max-w-6xl {
+    max-width: 1540px !important;
+  }
+
+  .max-w-5xl {
+    max-width: 1440px !important;
+  }
+
+  .max-w-4xl {
+    max-width: 1320px !important;
+  }
+
+  /* 2. Header / Navbar Scaling */
+  header .max-w-7xl {
+    max-width: 1680px !important;
+  }
+
+  header nav button {
+    font-size: 15px !important;
+    padding: 8px 22px !important;
+  }
+
+  /* 3. Hero Section (`#home`) at 1920px width */
+  #home .max-w-7xl {
+    max-width: 1700px !important;
+  }
+
+  #home h1 span:first-child {
+    font-size: 205px !important;
+    letter-spacing: 12px !important;
+  }
+
+  #home h1 span:last-child {
+    font-size: 38px !important;
+    letter-spacing: 0.24em !important;
+    margin-top: 16px !important;
+  }
+
+  .hero-subtitle {
+    font-size: 17.5px !important;
+    line-height: 27px !important;
+    max-width: 660px !important;
+    margin-top: 18px !important;
+  }
+
+  /* Left Tablet Mockup & Right Phone Mockup Scaling */
+  #home .max-w-\[320px\],
+  #home .xl\:max-w-\[360px\] {
+    max-width: 420px !important;
+  }
+
+  #home .max-w-\[300px\],
+  #home .xl\:max-w-\[320px\] {
+    max-width: 350px !important;
+  }
+
+  /* Hero Workflow Stage Cards (when scrolled) */
+  #home .lg\:col-span-4 > div {
+    border-radius: 20px !important;
+  }
+
+  /* 4. Figma Workspace Section */
+  section:has(video) .max-w-7xl,
+  #process .max-w-7xl {
+    max-width: 1620px !important;
+  }
+
+  /* 5. My Work Section (`#work`) */
+  #work .max-w-7xl {
+    max-width: 1680px !important;
+  }
+
+  #work .work-card {
+    border-radius: 28px !important;
+  }
+
+  #work .work-card > div:first-child {
+    min-height: 380px !important;
+  }
+
+  #work button[class*="rounded-full"] {
+    letter-spacing: 0.02em;
+  }
+
+  /* 6. Skills Section (`#skills`) */
+  #skills .max-w-7xl {
+    max-width: 1680px !important;
+  }
+
+  #skills .grid {
+    gap: 32px !important;
+  }
+
+  #skills .grid > div {
+    padding: 32px 36px !important;
+    border-radius: 28px !important;
+  }
+
+  /* 7. About Section (`#about`) */
+  #about .max-w-7xl {
+    max-width: 1680px !important;
+  }
+
+  /* 8. Career History Section (`#history`) */
+  #history .max-w-7xl {
+    max-width: 1680px !important;
+  }
+
+  #history .max-w-4xl {
+    max-width: 1360px !important;
+  }
+
+  #history .space-y-4 > div,
+  #history .space-y-6 > div {
+    padding: 32px 36px !important;
+    border-radius: 28px !important;
+  }
+
+  /* 9. Gallery Section Marquee (`#gallery`) */
+  .animate-marquee-left > div,
+  .animate-marquee-right > div {
+    width: 390px !important;
+    height: 255px !important;
+    border-radius: 20px !important;
+  }
+
+  /* 10. Contact Section (`#contact`) */
+  #contact .max-w-7xl {
+    max-width: 1680px !important;
+  }
+
+  #contact .max-w-6xl {
+    max-width: 1580px !important;
+  }
+
+  #contact .grid > div {
+    padding: 36px !important;
+    border-radius: 28px !important;
+  }
+
+  #contact input,
+  #contact textarea {
+    padding: 16px 20px !important;
+    font-size: 15px !important;
+  }
+
+  /* 11. Project Modal on 1920px Screens */
+  .max-w-5xl {
+    max-width: 1480px !important;
+    max-height: 88vh !important;
+  }
+}
+
+/* Height-specific fine-tuning for viewport height ~960px (typical 1080p desktop with taskbar) */
+@media (min-width: 1720px) and (max-height: 1020px) {
+  #home {
+    padding-top: 74px !important;
+    padding-bottom: 14px !important;
+  }
+
+  #home h1 span:first-child {
+    font-size: 188px !important;
+  }
+
+  #home .hero-subtitle {
+    font-size: 16px !important;
+    line-height: 25px !important;
+    margin-top: 12px !important;
+    padding-top: 0 !important;
+  }
+
+  #home .max-w-\[320px\],
+  #home .xl\:max-w-\[360px\] {
+    max-width: 380px !important;
+  }
+
+  #home .max-w-\[300px\],
+  #home .xl\:max-w-\[320px\] {
+    max-width: 320px !important;
+  }
+
+  #home .lg\:col-span-4.h-0 {
+    height: 360px !important;
+  }
+
+  /* Keep video height proportional so it fits within 960px height */
+  section:has(video) .aspect-\[16\/9\] {
+    max-height: 620px !important;
+  }
+}
+
+/* ==========================================================================
+   Hide Netlify Badge / Feedback Drawer
+   ========================================================================== */
+.nl-badge,
+.nl-badge-label,
+.nl-badge-brand,
+[class*="nl-badge"],
+#netlify-badge,
+[data-netlify-badge],
+.netlify-badge,
+iframe[title*="Netlify"],
+[id*="netlify-drawer"],
+div[class*="netlify-badge"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0) !important;
+  z-index: -9999 !important;
+}
+

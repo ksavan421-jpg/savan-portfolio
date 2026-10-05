@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
-import { LinkedinIcon, DribbbleIcon } from './Icons';
+import { LinkedinIcon } from './Icons';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -122,26 +122,20 @@ export default function ContactSection() {
 
               </div>
 
-              {/* Social links (GitHub & Pinterest removed as requested) */}
+              {/* Professional Social Link */}
               <div className="pt-4 border-t border-white/10">
-                <span className="text-xs text-zinc-400 font-medium block mb-3">Connect on Professional Networks</span>
+                <span className="text-xs text-zinc-400 font-medium block mb-3">Connect on Professional Network</span>
                 <div className="flex items-center gap-2.5">
-                  {[
-                    { label: 'LinkedIn', icon: <LinkedinIcon className="w-4 h-4" />, href: 'https://linkedin.com' },
-                    { label: 'Dribbble', icon: <DribbbleIcon className="w-4 h-4" />, href: 'https://dribbble.com' }
-                  ].map((s) => (
-                    <a
-                      key={s.label}
-                      href={s.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-zinc-300 hover:text-white hover:bg-[#001D8F] hover:border-[#0033FF] transition-all duration-300 shadow-sm flex items-center gap-2 text-xs font-medium"
-                      title={s.label}
-                    >
-                      {s.icon}
-                      <span>{s.label}</span>
-                    </a>
-                  ))}
+                  <a
+                    href="https://www.linkedin.com/in/savan-kumar-6988a5312/?isSelfProfile=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-zinc-300 hover:text-white hover:bg-[#001D8F] hover:border-[#0033FF] transition-all duration-300 shadow-sm flex items-center gap-2 text-xs font-medium"
+                    title="LinkedIn Profile"
+                  >
+                    <LinkedinIcon className="w-4 h-4" />
+                    <span>LinkedIn</span>
+                  </a>
                 </div>
               </div>
 

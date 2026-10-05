@@ -26,9 +26,9 @@ export default function HistorySection() {
       location: 'NEW DELHI, JANAKPURI',
       period: '2018 — 2019',
       totalTime: '1.5 YEARS',
-      designation: 'UI UX & Web Designer',
+      designation: 'Web Designer',
       work: 'Education, NGO, Hotel, Product Websites',
-      tags: ['UI/UX', 'Wireframing', 'Hotel Websites', 'NGO Platforms', 'HTML5/CSS3']
+      tags: ['Web Design', 'Wireframing', 'Hotel Websites', 'NGO Platforms', 'HTML5/CSS3']
     }
   ];
 

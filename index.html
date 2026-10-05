@@ -16,6 +16,14 @@
       window.addEventListener('pageshow', function() {
         window.scrollTo(0, 0);
       });
+      // Automatically remove Netlify badge element if injected
+      var netlifyBadgeObserver = new MutationObserver(function() {
+        var badges = document.querySelectorAll('.nl-badge, [class*="nl-badge"], .nl-badge-label, .nl-badge-brand, #netlify-badge, [data-netlify-badge]');
+        badges.forEach(function(el) {
+          el.remove();
+        });
+      });
+      netlifyBadgeObserver.observe(document.documentElement, { childList: true, subtree: true });
     </script>
     <title>Savan | UI/UX & Web Designer</title>
     <meta name="description" content="Portfolio of Savan - UI/UX & Web Designer. I Design Bold, Minimal Digital Experiences That Connect Creative Visual Design With Clean Technical Execution." />
