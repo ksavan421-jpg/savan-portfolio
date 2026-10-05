@@ -97,9 +97,9 @@ const SAAS_IMAGES = [
 ];
 
 const ELDECO_GROUP_IMAGES = [
-  '/work/eldeco-group/home%20page.png',
-  '/work/eldeco-group/microsite.png',
-  '/work/eldeco-group/microsite-0003.png',
+  '/work/eldeco-group/home-page.jpg',
+  '/work/eldeco-group/microsite.jpg',
+  '/work/eldeco-group/microsite-0003.jpg',
   '/work/eldeco-group/our-story.png',
   '/work/eldeco-group/our-team.png',
   '/work/eldeco-group/career.png',
@@ -217,7 +217,7 @@ export default function MyWorkSection({ onSelectProject }) {
         tagline: 'Corporate Builder & Real Estate Web Platform',
         category: 'Website',
         image: '/work/eldeco-group/eldeco-cover.png',
-        figmaLayout: '/work/eldeco-group/home%20page.png',
+        figmaLayout: '/work/eldeco-group/home-page.jpg',
         layoutName: 'eldeco-group-home-page',
         layoutDimensions: '4823 × 32768px',
         cardBg: '#94b3f3',
