@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Real Estate Layout</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <style type="text/css">
+     .d-view{display:block;}
+     .m-view{display:none;}
+     @media(max-width:600px){
+     .d-view{display:none;}
+     .m-view{display:block;}
+     }
+  </style>
+
+</head>
+<body> 
+<!------------------------------ Menu Codes Start From Here ------------------------------>
+<nav class="navbar navbar-expand-md custom-navbar" id="header_menu">
+  <!-- Brand -->
+  <a class="navbar-brand" href="index.html"><img src="images/developer-logo.jpg" alt="TARC Tripundra" class="img-fluid developer-log-img"></a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <img src="images/menubar-icon.png" alt="" class="img-fluid menubar-icon">
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item nav-item-2">
+        <a class="nav-link nav-link-custom" href="#overview">Overview</a>
+      </li>
+      <li class="nav-item nav-item-2">
+        <a class="nav-link nav-link-custom" href="#highlights">Highlights</a>
+      </li>
+      <li class="nav-item nav-item-2">
+        <a class="nav-link nav-link-custom" href="#price-list">Price List</a>
+      </li>
+      <li class="nav-item nav-item-2">
+        <a class="nav-link nav-link-custom" href="#amenities">Amenities</a>
+      </li>  
+      <li class="nav-item nav-item-2">
+        <a class="nav-link nav-link-custom" href="#floor-plan">Floor Plan</a>
+      </li>
+      <li class="nav-item nav-item-2">
+        <a class="nav-link nav-link-custom" href="#location-map">Location Map</a>
+      </li>   
+      <li class="nav-item nav-item-2">
+        <a class="nav-link nav-link-custom" href="#gallery">Gallery</a>
+      </li>       
+      <li class="nav-item last-li nav-item-2">
+        <a class="nav-link nav-link-custom" href="#contact-us">Contact Us</a>
+      </li>       
+    </ul>
+  </div>
+</nav>
+<!------------------------------ Menu Codes End From Here ------------------------------>
+<!------------------------------ Slider and Form Codes Start From Here ------------------------------>
+<div class="container-fluid slider-container">
+   <div id="demo" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <!--   <ul class="carousel-indicators">
+         <li data-target="#demo" data-slide-to="0" class="active"></li>
+         <li data-target="#demo" data-slide-to="1"></li>
+         <li data-target="#demo" data-slide-to="2"></li>
+         </ul> -->
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+         <div class="carousel-item active">
+            <img src="images/slider-image/slider-img-3.jpg" alt="TARC Tripundra" class="img-fluid">
+         </div>
+         <div class="carousel-item">
+            <img src="images/slider-image/slider-img-3.jpg" alt="TARC Tripundra" class="img-fluid">
+         </div>
+         <div class="carousel-item">
+            <img src="images/slider-image/slider-img-3.jpg" alt="TARC Tripundra" class="img-fluid">
+         </div>         
+      </div>
+      <!-- Left and right controls -->
+      <div class="slider-controler">
+         <a class="carousel-control-prev" href="#demo" data-slide="prev">
+         <span class="carousel-control-prev-icon"></span>
+         </a>
+         <a class="carousel-control-next" href="#demo" data-slide="next">
+         <span class="carousel-control-next-icon"></span>
+         </a>
+      </div>
+      <div class="slider-content">
+         <div class="slider-content-2">
+            <div class="top-details-content">
+               <h1><!-- PROJECT NAME --> <img src="images/project-logo.png" alt="TARC Tripundra" class="img-fluid project-name-img"></h1>
+              <h4 class="location-heading"><img src="images/location-pin.png" alt="" class="img-fluid location-icon"> Main Bijwasan Road, Opposite Pushpanjali Farms</h4> 
+               <h3>3 & 4 BHK PRIME RESIDENCES</h3>
+               <ul class="key-highlights">
+                  <li><img src="images/star-icons.png" alt="TARC Tripundra" class="img-fluid star-img"> PLP Plan – 30-20-50</li>
+                  <li><img src="images/star-icons.png" alt="TARC Tripundra" class="img-fluid star-img"> Subvention Plan- 10-90</li>
+                  <li><img src="images/star-icons.png" alt="TARC Tripundra" class="img-fluid star-img"> Project Area 2.97 Acres</li>
+                  <li><img src="images/star-icons.png" alt="TARC Tripundra" class="img-fluid star-img">Possession Date (Rera) - Sep-26</li>
+               </ul>
+            </div>
+            <div class="starting-price-box">
+               <p>Price Start From</p>
+               <h4>₹ 5 Cr*</h4>
+            </div>
+            <div class="video-icon" data-toggle="modal" data-target="#video-modal">
+              <div class="wrapper">
+                <div class="video-main">
+                  <div class="promo-video">
+                    <div class="waves-block">
+                      <div class="waves wave-1"></div>
+                      <div class="waves wave-2"></div>
+                      <div class="waves wave-3"></div>
+                    </div>
+                  </div>
+                  <a href="Javascript:;" class="video video-popup mfp-iframe" data-lity><img src="images/play.png" alt="" class="img-fluid play-icon"></a>
+                </div>
+              </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="form-box">
+      <h4>Send A Message!</h4>
+      <div class="form-group">
+         <input type="text" class="form-control" placeholder="Enter Name" id="qSenderName">
+      </div>
+      <div class="form-group">
+         <input type="email" class="form-control email-address" placeholder="Enter Email" id="qEmailID">
+      </div>
+      <div class="form-group">
+         <input type="text" class="form-control number-only" placeholder="Enter Number" id="qMobileNo">
+      </div>
+      <div class="form-group">
+         <input type="text" class="form-control" placeholder="Enter Comments" id="qMessage">
+      </div>
+      <button type="button" class="btn btn-custom-2" id="SubmitQuery">SUBMIT NOW</button>  
+      <img src="images/about-one-shape-2.png" class="img-fluid shapeforbtn">               
+   </div>
+</div>
+<!------------------------------ Slider and Form Codes End From Here ------------------------------>
+
+
+<!------------------------------ Overview Codes Start From Here ------------------------------>
+<div class="container-fluid overview-container" id="overview">
+  <div class="side-img-box">
+    <img src="images/about-1-2.png" alt="" class="img-fluid side-img">
+    <div class="side-heading"><span>PROJECT NAME</span></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 left-col">
+        <img src="images/about-one-shape-1.png" alt="TARC Tripundra" class="img-fluid shape-1 slideInLeft">
+        <div class="overview-img">
+          <img src="images/overview-img.jpg" alt="TARC Tripundra" class="img-fluid overview-img">
+
+
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 right-col">
+        <div class="banner-shape-1"></div>
+        <div class="side-top-content">
+          <p class="sub-head-heading">PROJECT NAME</p>
+          <h4>Wholesome Living, <br>Experiential Living</h4>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more.</p>
+          <ul>
+            <li><img src="images/checked.png" alt="" class="img-fluid check-img"> Total Number of Towers 3</li>
+            <li><img src="images/checked.png" alt="" class="img-fluid check-img"> Total Number of Units 187</li>
+            <li><img src="images/checked.png" alt="" class="img-fluid check-img"> INDOOR HEATED POOL</li>
+            <li><img src="images/checked.png" alt="" class="img-fluid check-img"> 7D SECURITY </li>   
+
+          </ul>
+          <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#myModal">Download Brochure</button> <span><img src="images/about-one-shape-2.png" class="img-fluid shapeforbtn"></span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!------------------------------ Overview Codes End From Here ------------------------------>
+<!------------------------------ Highlights Start From Here ------------------------------>
+<div class="container-fluid highlights-container" id="highlights">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+        <img src="images/highlights-img.jpg" alt="TARC Tripundra" class="img-fluid highlight-img">
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+        <div class="highlight-content">
+          <p class="sub-head-heading">OUR HIGHLIGHTS</p>
+          <h4>VALUES OF SMART LIVING IN OUR RESIDENCE</h4>
+        
+        <div class="box-highlight-point">
+          <div class="custom-row">
+            <div class="custom-col">
+              <img src="images/apartment-2-1.jpg" alt="TARC Tripundra" class="img-fluid highlight-img-2">
+            </div>
+            <div class="custom-col">
+              <ul>
+                <li><img src="images/checked-2.png" alt="" class="img-fluid check-img"> Earthquake compliance structure designed for zone 5</li>
+                <li><img src="images/checked-2.png" alt="" class="img-fluid check-img">  Located amidst Pushpanjali Greens on the main Bijwasan road having a matchless proximity with Aerocity. the prime residences.</li>
+                <li><img src="images/checked-2.png" alt="" class="img-fluid check-img">  Tripundra is building a greener way of life for a livelier yet impactful lifestyle that promotes sustainable living.</li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!------------------------------ Highlights Codes End From Here ------------------------------>
+
+
+<!------------------------------ Price List Start From Here ------------------------------>
+<div class="container-fluid pricelist-container" id="price-list">
+   <img src="images/values-one-shape-1.png" alt="" class="img-fluid pricelist-img-bg">
+   <div class="container">
+      <div class="row justify-content-center">
+         <div class="col-12 col-sm-12 text-center">
+            <p class="sub-head-heading">OUR PRICE LIST</p>
+            <h4>QUALITY THAT FITS YOUR BUDGET</h4>
+         </div>
+         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 text-center">
+            <div class="pricebox">
+               <h4>3 BHK</h4>
+               <p>Size - 2200 Sq.Ft.</p>
+               <p class="price-list-heading">Price Start From</p>
+               <h4 class="price">₹ 5 Cr*</h4>
+               <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#myModal">INTERESTED</button>
+               <img src="images/about-one-shape-2.png" class="img-fluid shapeforbtn" alt="TARC Tripundra">
+            </div>
+         </div>
+         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 text-center">
+            <div class="pricebox">
+               <h4>4 BHK </h4>
+               <p>Size - On Request</p>
+               <p class="price-list-heading">Price Start From</p>
+               <h4 class="price">On Request</h4>
+               <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#myModal">INTERESTED</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!------------------------------ Price List End From Here ------------------------------>
+
+<!------------------------------ Amenities Codes Start From Here ------------------------------>
+<div class="container-fluid amenities-container" id="amenities">
+   <div class="container">
+      <div class="row">
+         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-for-heading">
+            <p class="sub-head-heading">AMENITIES</p>
+            <h4>STUNNING LUXURY PRIME RESIDENCES, DESIGNED FOR LIFE</h4>
+            <button type="button" class="btn btn-custom-2" data-toggle="modal" data-target="#myModal">SCHEDULE A VISIT</button>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="ami-box">
+               <img src="images/amenities/swimming.png" alt="TARC Tripundra" class="img-fluid amenities-img">
+               <p>OUTDOOR POOL</p>
+            </div>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="ami-box">
+               <img src="images/amenities/theater.png" alt="TARC Tripundra" class="img-fluid amenities-img">
+               <p>MINI THEATRE</p>
+            </div>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="ami-box">
+               <img src="images/amenities/spa.png" alt="TARC Tripundra" class="img-fluid amenities-img">
+               <p>SPA & WELLNESS</p>
+            </div>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="ami-box">
+               <img src="images/amenities/playground.png" alt="TARC Tripundra" class="img-fluid amenities-img">
+               <p>KID'S PLAY AREA</p>
+            </div>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="ami-box">
+               <img src="images/amenities/party.png" alt="TARC Tripundra" class="img-fluid amenities-img">
+               <p>PARTY TERRACE</p>
+            </div>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="ami-box">
+               <img src="images/amenities/gym.png" alt="TARC Tripundra" class="img-fluid amenities-img">
+               <p>GYM</p>
+            </div>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="ami-box">
+               <img src="images/amenities/multipurpose-hall.png" alt="TARC Tripundra" class="img-fluid amenities-img">
+               <p>MULTIPURPOSE HALL</p>
+            </div>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="ami-box">
+               <img src="images/amenities/telescope.png" alt="TARC Tripundra" class="img-fluid amenities-img">
+               <p>OBSERVATORY DECK</p>
+            </div>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="ami-box">
+               <img src="images/amenities/run.png" alt="TARC Tripundra" class="img-fluid amenities-img">
+               <p>JOGGING TRACK</p>
+            </div>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="ami-box">
+               <img src="images/amenities/basketball-hoop.png" alt="TARC Tripundra" class="img-fluid amenities-img">
+               <p>HALF BASKETBALL COURT</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <img src="images/counter-one-bg-img-1.png" alt="TARC Tripundra" class="img-fluid amenities-img-bg">
+</div>
+<!------------------------------ Amenities Codes End From Here ------------------------------>
+<!------------------------------ Floor Plans Codes Start From Here ------------------------------>
+<div class="container-fluid floorplan-container" id="floor-plan">
+   <div class="container">
+      <div class="col-sm-12 col-for-heading-2">
+         <p class="sub-head-heading">OUR FLOOR PLANS</p>
+         <h4>PRIME RESIDENCES PLANS</h4>
+         <button type="button" class="btn btn-custom-2" data-toggle="modal" data-target="#myModal">DOWNLOAD ALL PLANS</button>
+      </div>
+      <div class="row justify-content-center">
+         <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="floorplan-box">
+               <a href="images/floorplan/3-bhk-plan-zoom.jpg" class="with-caption image-link" title="3 BHk Plan">
+                <img src="images/floorplan/3-bhk-plan.jpg" alt="3 BHK Plan" class="img-fluid floorplan-img d_sm_none">
+                <img src="images/floorplan/mobile-view/3-bhk-plan-min.jpg" alt="3 BHK Plan" class="img-fluid floorplan-img d_sm_block">
+               </a>
+               <p>3 BHK Plan</p>
+            </div>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="floorplan-box">
+               <a href="images/floorplan/3-bhk-plan-zoom.jpg" class="with-caption image-link" title="4 BHK Plan">
+               <img src="images/floorplan/4-bhk-plan.jpg" alt="4 BHK Plan" class="img-fluid floorplan-img d_sm_none">
+               <img src="images/floorplan/mobile-view/4-bhk-plan-min.jpg" alt="4 BHK Plan" class="img-fluid floorplan-img d_sm_block">
+               </a>
+               <p>4 BHK Plan</p>
+            </div>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="floorplan-box">
+               <a href="images/floorplan/floor-plan-3-zoom.jpg" class="with-caption image-link" title="Typology Plan">
+               <img src="images/floorplan/floor-plan-3.jpg" alt="Typology Plan" class="img-fluid floorplan-img d_sm_none">
+               <img src="images/floorplan/mobile-view/floor-plan-3-min.jpg" alt="Typology Plan" class="img-fluid floorplan-img d_sm_block">
+               </a>
+               <p>Typology Plan</p>
+            </div>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="floorplan-box">
+               <a href="images/floorplan/floor-plan-2-zoom.jpg" class="with-caption image-link" title="Club Amenities">
+               <img src="images/floorplan/floor-plan-2.jpg" alt="Club Amenities" class="img-fluid floorplan-img d_sm_none">
+               <img src="images/floorplan/mobile-view/floor-plan-2-min.jpg" alt="Club Amenities" class="img-fluid floorplan-img d_sm_block">
+               </a>
+               <p>Club Amenities</p>
+            </div>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="floorplan-box">
+               <a href="images/floorplan/floor-plan-1-zoom.jpg" class="with-caption image-link" title="Terrace Amenities">
+               <img src="images/floorplan/floor-plan-1.jpg" alt="Terrace Amenities" class="img-fluid floorplan-img d_sm_none">
+               <img src="images/floorplan/mobile-view/floor-plan-1-min.jpg" alt="Terrace Amenities" class="img-fluid floorplan-img d_sm_block">
+               </a>
+               <p>Terrace Amenities</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!------------------------------ Floor Plans Codes End From Here ------------------------------>
+<!------------------------------ Location Map Codes Start From Here ------------------------------>
+<div class="container-fluid location-advantage-container" id="location-map">
+   <div class="container">
+      <div class="row">
+         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+            <p class="sub-head-heading">LOCATION ADVANTAGE</p>
+            <h4>EXPERIENCE THE JOY OF UNPARALLELED <br>CONNECTIVITY, COMFORT & CONVENIENCE</h4>
+            <p class="para">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into.</p>
+
+
+         </div>
+         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
+            <a href="images/location-map.jpg" class="with-caption image-link" title="Location Map">
+            <img src="images/location-map-min.jpg" alt="TARC Tripundra" class="img-fluid location-map">
+            </a>
+         </div>
+         <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 right-col-2">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#home">Convenience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#menu1">Connectivity</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#menu2">Comfort</a>
+            </li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="home">            
+              <div class="custom-row-2">
+               <div class="custom-col-2">
+                  <div class="location-content-box">
+                     <img src="images/tray.png" alt="" class="img-fluid location-a-img">
+                     <h4>50+</h4>
+                     <p>Gourmet Restaurants</p>
+                  </div>
+               </div>
+               <div class="custom-col-2">
+                  <div class="location-content-box">
+                     <img src="images/shopping-cart.png" alt="" class="img-fluid location-a-img">
+                     <h4>10+</h4>
+                     <p>Shopping Malls</p>
+                  </div>
+               </div>
+               <div class="custom-col-2">
+                  <div class="location-content-box">
+                     <img src="images/school.png" alt="" class="img-fluid location-a-img">
+                     <h4>10+</h4>
+                     <p>Leading Schools</p>
+                  </div>
+               </div>
+               <div class="custom-col-2">
+                  <div class="location-content-box">
+                     <img src="images/hospital.png" alt="" class="img-fluid location-a-img">
+                     <h4>10+</h4>
+                     <p>Health Care Facilities</p>
+                  </div>
+               </div>
+            </div>
+          </div>
+            <div class="tab-pane fade" id="menu1">
+              <div class="location-content-box-2">
+                <p class="para-2"><img src="images/checked.png" alt="" class="img-fluid check-img"> Tripundra Residences New Delhi is located amidst Pushpanjali Greens on the main Bijwasan Road having a matchless proximity with Aerocity besides its exceptional closeness to Delhi Airport.</p>
+                <p class="para-2"><img src="images/checked.png" alt="" class="img-fluid check-img"> Tripundra Residences New Delhi is moments away from Pushpanjali Farms, West End Greens, Vasant Vihar and Dwarka.</p>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="menu2">
+                <div class="location-content-box-2">
+                <p class="para-2"><img src="images/checked.png" alt="" class="img-fluid check-img"> Opulence nestled amidst pristine greens away from traffic snarls for exuberant living</p>
+                <p class="para-2"><img src="images/checked.png" alt="" class="img-fluid check-img"> Surrounded by farms for a better quality of life for happiness and merriment</p>
+              </div>              
+            </div>
+          </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!------------------------------ Location Map Codes End From Here ------------------------------>
+<!------------------------------ Gallery Codes Start From Here ------------------------------>
+<div class="container-fluid gallery-container" id="gallery">
+   <img src="images/values-one-shape-1.png" alt="TARC Tripundra" class="img-fluid pricelist-img-bg">
+   <div class="container">
+      <div class="col-12 col-sm-12 text-center">
+         <p class="sub-head-heading">OUR GALLERY</p>
+         <h4>ONCE IN A LIFETIME EXPERIENCE</h4>
+      </div>
+      <div class="row justify-content-center">
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <a href="images/gallery/image-1-zoom.jpg" class="with-caption image-link" title="Elevations">
+               <img src="images/gallery/image-1-min.jpg" alt="Elevations" class="img-fluid gallery-img d_sm_none">
+               <img src="images/gallery/mobile-view/image-1-min.jpg" alt="Elevations" class="img-fluid gallery-img d_sm_block">
+               <p class="img-title-name">Elevations</p>
+            </a>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <a href="images/gallery/image-2-zoom.jpg" class="with-caption image-link" title="Pool Side Top">
+               <img src="images/gallery/image-2-min.jpg" alt="Elevations" class="img-fluid gallery-img d_sm_none">
+               <img src="images/gallery/mobile-view/image-2-min.jpg" alt="Pool Side Top" class="img-fluid gallery-img d_sm_block">
+               <p class="img-title-name">Pool Side Top</p>
+            </a>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <a href="images/gallery/image-3-zoom.jpg" class="with-caption image-link" title="Facade">
+               <img src="images/gallery/image-3-min.jpg" alt="Facade Cam HI RES" class="img-fluid gallery-img d_sm_none">
+               <img src="images/gallery/mobile-view/image-3-min.jpg" alt="Facade Cam HI RES" class="img-fluid gallery-img d_sm_block">
+               <p class="img-title-name">Facade</p>
+            </a>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <a href="images/gallery/image-4-zoom.jpg" class="with-caption image-link" title="Outdoor Pool">
+               <img src="images/gallery/image-4-min.jpg" alt="Poolcam Taarc" class="img-fluid gallery-img d_sm_none">
+               <img src="images/gallery/mobile-view/image-4-min.jpg" alt="Poolcam Taarc" class="img-fluid gallery-img d_sm_block">
+               <p class="img-title-name">Outdoor Pool</p>
+            </a>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <a href="images/gallery/image-5-zoom.jpg" class="with-caption image-link" title="Entrance Lobby">
+               <img src="images/gallery/image-5-min.jpg" alt="Entrance Lobby" class="img-fluid gallery-img d_sm_none">
+               <img src="images/gallery/mobile-view/image-5-min.jpg" alt="Entrance Lobby" class="img-fluid gallery-img d_sm_block">
+               <p class="img-title-name">Entrance Lobby</p>
+            </a>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <a href="images/gallery/image-6-zoom.jpg" class="with-caption image-link" title="Zen Garden">
+               <img src="images/gallery/image-6-min.jpg" alt="Zen Garden" class="img-fluid gallery-img d_sm_none">
+               <img src="images/gallery/mobile-view/image-6-min.jpg" alt="Zen Garden" class="img-fluid gallery-img d_sm_block">
+               <p class="img-title-name">Zen Garden</p>
+            </a>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <a href="images/gallery/image-7-zoom.jpg" class="with-caption image-link" title="Mini Theater">
+               <img src="images/gallery/image-7-min.jpg" alt="Mini Theater" class="img-fluid gallery-img d_sm_none">
+               <img src="images/gallery/mobile-view/image-7-min.jpg" alt="Mini Theater" class="img-fluid gallery-img d_sm_block">
+               <p class="img-title-name">Mini Theater</p>
+            </a>
+         </div>
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <a href="images/gallery/image-8-zoom.jpg" class="with-caption image-link" title="Enterance Gate">
+               <img src="images/gallery/image-8-min.jpg" alt="Enterance Cam" class="img-fluid gallery-img d_sm_none">
+               <img src="images/gallery/mobile-view/image-8-min.jpg" alt="Enterance Cam" class="img-fluid gallery-img d_sm_block">
+               <p class="img-title-name">Enterance Gate</p>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+<!------------------------------ Gallery Codes End From Here ------------------------------>
+<!------------------------------ Contact Us Codes Start From Here ------------------------------>
+<div class="container-fluid contact-us-container" id="contact-us">
+   <div class="container">
+      <div class="row">
+         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="contact-form-footer">
+               <p class="sub-head-heading">CONTACT US</p>
+               <h4>WE ARE HERE TO MAKE THINGS EASIER</h4>
+               <div class="Number-box">
+                  <h4 class="ivr-heading"><img src="images/call-ivr.png" alt="" class="img-fluid call-us-mobile"> <a href="tel:XXXXXXXXXX">+91-XXXX-XX-XXXX</a></h4>
+                  <h4 class="ivr-heading"><img src="images/whatsapp-icon.png" alt="" class="img-fluid call-us-mobile"> <a href="#">+91-9999-99-999</a></h4>
+               </div>
+
+            </div>
+         </div>
+         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="form-box">
+               <h4>Send A Message!</h4>
+               <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Enter Name" id="qSenderName2">
+               </div>
+               <div class="form-group">
+                  <input type="email" class="form-control email-address" placeholder="Enter Email" id="qEmailID2">
+               </div>
+               <div class="form-group">
+                  <input type="text" class="form-control number-only" placeholder="Enter Number" id="qMobileNo2">
+               </div>
+               <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Enter Comments" id="qMessage2">
+               </div>
+               <button type="button" class="btn btn-custom-2" id="SubmitQuery2">SUBMIT NOW</button>                 
+            </div>
+         </div>
+      </div>
+   </div>
+   <img src="images/availability-bg.png" alt="" class="img-fluid footer-img-bg">
+</div>
+<!------------------------------ Contact Us Codes End From Here ------------------------------>
+<!------------------------------ Make Appointment Codes Strat From Here ------------------------------>
+<div class="container-fluid appointment-container">
+   <div class="container">
+      <div class="row">
+         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <p class="sub-head-heading">FOR MORE INFORMATION</p>
+            <h4>MAKE AN APPOINTMENT NOW</h4>
+         </div>
+         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <button type="button" class="btn btn-custom-2" data-toggle="modal" data-target="#myModal">SCHEDULE A VISIT</button>
+         </div>
+      </div>
+   </div>
+</div>
+<!------------------------------ Make Appointment Codes End From Here ------------------------------>
+<!------------------------------ About Developer Codes Start From Here ------------------------------>
+<div class="container-fluid about-developer" id="about-developer">
+   <div class="container">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+         <p class="sub-head-heading">OUR DEVELOPER</p>
+         <h4>ABOUT Comapny</h4>
+         <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with.
+
+         </p>
+      </div>
+      <div class="col-12 text-center">
+         <div class="last-footer-content">
+            <p> Disclaimer :- This message contains information which is confidential and the copyrights of our company or a third party.</p>
+            <p>RERA NO: XXXXXXXXXXX, CIN NO: XXXXXXXXXXX </p>
+            <p>Digital Media Planned by:<a href="http://www.gtftechnologies.com/" target="_blank"> GTF Technologies </a> | <a href="https://www.google.com/partners/agency?id=6096246672" target="_blank" style="color:#fff">Google Partner <img src="https://www.gstatic.com/partners/badge/images/2021/PartnerBadgeClickable.svg" class="google-partner" width="20px"> </a> </p>
+            <p><a href="disclaimer.html">Disclaimer &amp; Privacy Policy</a></p>
+         </div>
+      </div>
+   </div>
+</div>
+<!------------------------------ About Developer Codes End From Here ------------------------------>
+<!------------------------------ Mobile Tabse Codes Start From Here ------------------------------>
+<div class="mobile-section-1"> 
+  <div class="mobile-section-2"> 
+    <div class="mobile-section"> 
+      <a href="#" class="btn btn-success btn-block" title="Enquire Now" data-toggle="modal" data-target="#myModal">  Enquire Now</a> 
+      <!-- <a href="https://api.whatsapp.com/send?phone=+91-XXXXXX &amp;text=Hello, Looking for project name &amp; location name. Get in touch with me my name is" class="btn btn-success btn-block middle-button">Whats App</a>  -->
+      <a href="tel:+91-XXXXXXXXXX" class="btn btn-success btn-block"> Tap To Call</a> 
+    </div>
+  </div>
+</div>
+<!------------------------------ Mobile Tabse Codes End From Here ------------------------------>
+
+<!------------------------------ Modal popup Codes Start From Here ------------------------------>
+<div class="modal custom-modal" id="myModal">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <!-- Modal body -->
+         <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="form-box">
+               <img src="images/project-logo.png" alt="TARC Tripundra" class="img-fluid project-name-img">
+               <h4>Send A Message!</h4>
+               <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Enter Name" id="qSenderName3">
+               </div>
+               <div class="form-group">
+                  <input type="email" class="form-control email-address" placeholder="Enter Email" id="qEmailID3">
+               </div>
+               <div class="form-group">
+                  <input type="text" class="form-control number-only" placeholder="Enter Number" id="qMobileNo3">
+               </div>
+               <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Enter Comments" id="qMessage3">
+               </div>
+               <button type="button" class="btn btn-custom-2" id="SubmitQuery3">SUBMIT NOW</button>  
+               <img src="images/about-one-shape-2.png" class="img-fluid shapeforbtn">               
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!------------------------------ Modal popup Codes End From Here ------------------------------>
+
+  <!-- The Modal -->
+  <div class="modal custom-modal" id="video-modal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- Modal body -->
+        <div class="modal-body">
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <video width="100%" height="auto" controls loop autoplay muted>
+          <source src="images/Walk-Through.mp4" type="video/mp4">
+        </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+    (function(){
+        if (window.matchMedia("(max-width: 500px)").matches) {
+            Array.from(document.getElementsByClassName('d_sm_none')).forEach(function(item){
+                item.parentNode.removeChild(item);
+            });
+        }else{
+            Array.from(document.getElementsByClassName('d_sm_block')).forEach(function(item){
+                item.parentNode.removeChild(item);
+            });
+        }
+    })()
+</script>
+
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+
+  <script type="text/javascript" language="javascript">
+    var versionUpdate = (new Date()).getTime();
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://api2.gtftech.com/scripts/queryform.min.ssl.js?v=" + versionUpdate;
+    document.body.appendChild(script);
+  </script>
+  <script>
+     var AgentInfo = {
+         "vAgentID": "4615",
+         "vProject": "TARC Tripundra Delhi",
+         "vURL": "http://tarc-tripundradelhi.com/",
+         "thankspageurl": "http://tarc-tripundradelhi.com/thanks.htm",
+     };
+
+     //Needs to be duplicate in the case of multiple forms on the same page
+     //--------------------------------------------------------------------------------------//
+     $('#preferedtime').hide();
+
+     $("#SubmitQuery").click(function () {
+         var FormInfo = {
+             "SenderControlID": "qSenderName",
+             "SenderControlMobileID": "qMobileNo",
+             "SenderControlEmailID": "qEmailID",
+             "SenderControlMsgID": "qMessage"
+         };
+
+         SubmitQueryData(AgentInfo, FormInfo);
+     });
+
+     $("#SubmitQuery1").click(function () {
+         var FormInfo = {
+             "SenderControlID": "qSenderName1",
+             "SenderControlMobileID": "qMobileNo1",
+             "SenderControlEmailID": "qEmailID1",
+             "SenderControlMsgID": "qMessage1"
+         };
+
+         SubmitQueryData(AgentInfo, FormInfo);
+     });    
+
+     $("#SubmitQuery2").click(function () {
+         var FormInfo = {
+             "SenderControlID": "qSenderName2",
+             "SenderControlMobileID": "qMobileNo2",
+             "SenderControlEmailID": "qEmailID2",
+             "SenderControlMsgID": "qMessage2"
+         };
+
+         SubmitQueryData(AgentInfo, FormInfo);
+     });  
+
+     $("#SubmitQuery3").click(function () {
+         var FormInfo = {
+             "SenderControlID": "qSenderName3",
+             "SenderControlMobileID": "qMobileNo3",
+             "SenderControlEmailID": "qEmailID3",
+             "SenderControlMsgID": "qMessage3"
+         };
+
+         SubmitQueryData(AgentInfo, FormInfo);
+     }); 
+
+    $("#SubmitQuerymodal").click(function () {
+         var FormInfo = {
+             "SenderControlID": "qSenderNamemodal",
+             "SenderControlMobileID": "qMobileNomodal",
+             "SenderControlEmailID": "qEmailIDmodal",
+             "SenderControlMsgID": "qMessagemodal"
+         };
+
+         SubmitQueryData(AgentInfo, FormInfo);
+     });
+
+   $("#SubmitQueryfooter").click(function () {
+         var FormInfo = {
+             "SenderControlID": "qSenderNamefooter",
+             "SenderControlMobileID": "qMobileNofooter",
+             "SenderControlEmailID": "qEmailIDfooter",
+             "SenderControlMsgID": "qMessagefooter"
+         };
+
+         SubmitQueryData(AgentInfo, FormInfo);
+     });
+
+     //--------------------------------------------------------------------------------------//
+  </script>
+ <script>
+   $('.without-caption').magnificPopup({
+     type: 'image',
+     closeOnContentClick: true,
+     closeBtnInside: false,
+     mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+     image: {
+         verticalFit: true
+     },
+     zoom: {
+         enabled: true,
+         duration: 300 // don't foget to change the duration also in CSS
+     }
+     });
+
+     $('.with-caption').magnificPopup({
+     type: 'image',
+     closeOnContentClick: true,
+     closeBtnInside: false,
+     mainClass: 'mfp-with-zoom mfp-img-mobile',
+     image: {
+         verticalFit: true,
+         titleSrc: function(item) {
+           return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank"></a>';
+         }
+     },
+     zoom: {
+         enabled: true
+     }
+   });
+   </script>
+
+  <script>
+$(document).ready(function(){
+  $(".nav-item-2").click(function(){
+    $(".collapse").removeClass("show");
+  });
+});
+</script>
+<script>
+    $('.nav-link-custom').on('click',function (e) {
+        var target = this.hash,
+        $target = $(target);
+        $('html, body').stop().animate({
+        'scrollTop': $target.offset().top-50
+         }, 100, 'swing', function () {
+         window.location.hash = target;
+      });
+    });
+
+  </script>
+<script>
+        const currentdate = new Date();
+        document.getElementById('footer_year').innerHTML = currentdate.getFullYear();
+    </script>
+</body>
+</html>
