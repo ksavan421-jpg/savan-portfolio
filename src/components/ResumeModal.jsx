@@ -68,19 +68,19 @@ export default function ResumeModal({ onClose }) {
             </div>
 
             <a
-              href="/savan-resume.pdf"
-              download="savan-resume.pdf"
+              href="/savan-resume-2026.pdf"
+              download="savan-resume-2026.pdf"
               className="px-6 py-3 rounded-full text-xs font-bold text-white bg-[#001D8F] hover:bg-[#0027bd] border border-[#0033FF]/40 shadow-xl shadow-[#001D8F]/60 flex items-center gap-2 whitespace-nowrap transition-all duration-300 hover:scale-105"
             >
               <Download className="w-4 h-4" />
-              <span>Download PDF (1.4 MB)</span>
+              <span>Download PDF (1.5 MB)</span>
             </a>
           </div>
 
           {/* Quick PDF Viewer Frame */}
           <div className="w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-white/10 bg-black/60 relative">
             <iframe 
-              src="/savan-resume.pdf#toolbar=0" 
+              src="/savan-resume-2026.pdf#toolbar=0" 
               title="Resume Preview"
               className="w-full h-full"
             />
@@ -89,7 +89,7 @@ export default function ResumeModal({ onClose }) {
           <div className="flex items-center justify-between text-xs text-zinc-400 pt-2">
             <span>Formats available: PDF (Standard A4 / Letter)</span>
             <a 
-              href="/savan-resume.pdf" 
+              href="/savan-resume-2026.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-400 hover:text-white flex items-center gap-1 font-semibold"
